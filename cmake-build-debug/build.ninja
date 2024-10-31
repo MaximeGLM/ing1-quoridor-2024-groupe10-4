@@ -63,8 +63,8 @@ build CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/sousprogramme.c.obj: C_COMPIL
   OBJECT_DIR = CMakeFiles\ing1_quoridor_2024_groupe10_4.dir
   OBJECT_FILE_DIR = CMakeFiles\ing1_quoridor_2024_groupe10_4.dir
 
-build CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/partiegraphique.c.obj: C_COMPILER__ing1_quoridor_2024_groupe10_4_unscanned_Debug C$:/Users/maxgo/CLionProjects/ing1-quoridor-2024-groupe10-4/partiegraphique.c || cmake_object_order_depends_target_ing1_quoridor_2024_groupe10_4
-  DEP_FILE = CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\partiegraphique.c.obj.d
+build CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/PartieGraphique.c.obj: C_COMPILER__ing1_quoridor_2024_groupe10_4_unscanned_Debug C$:/Users/maxgo/CLionProjects/ing1-quoridor-2024-groupe10-4/PartieGraphique.c || cmake_object_order_depends_target_ing1_quoridor_2024_groupe10_4
+  DEP_FILE = CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\PartieGraphique.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/maxgo/CLionProjects/ing1-quoridor-2024-groupe10-4/.
   OBJECT_DIR = CMakeFiles\ing1_quoridor_2024_groupe10_4.dir
@@ -77,8 +77,8 @@ build CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/Barrieres.c.obj: C_COMPILER__
   OBJECT_DIR = CMakeFiles\ing1_quoridor_2024_groupe10_4.dir
   OBJECT_FILE_DIR = CMakeFiles\ing1_quoridor_2024_groupe10_4.dir
 
-build CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/menuprincipal.c.obj: C_COMPILER__ing1_quoridor_2024_groupe10_4_unscanned_Debug C$:/Users/maxgo/CLionProjects/ing1-quoridor-2024-groupe10-4/menuprincipal.c || cmake_object_order_depends_target_ing1_quoridor_2024_groupe10_4
-  DEP_FILE = CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\menuprincipal.c.obj.d
+build CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/MenuPrincipal.c.obj: C_COMPILER__ing1_quoridor_2024_groupe10_4_unscanned_Debug C$:/Users/maxgo/CLionProjects/ing1-quoridor-2024-groupe10-4/MenuPrincipal.c || cmake_object_order_depends_target_ing1_quoridor_2024_groupe10_4
+  DEP_FILE = CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\MenuPrincipal.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/maxgo/CLionProjects/ing1-quoridor-2024-groupe10-4/.
   OBJECT_DIR = CMakeFiles\ing1_quoridor_2024_groupe10_4.dir
@@ -92,7 +92,7 @@ build CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/menuprincipal.c.obj: C_COMPIL
 #############################################
 # Link the executable ing1_quoridor_2024_groupe10_4.exe
 
-build ing1_quoridor_2024_groupe10_4.exe: C_EXECUTABLE_LINKER__ing1_quoridor_2024_groupe10_4_Debug CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/main.c.obj CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/sousprogramme.c.obj CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/partiegraphique.c.obj CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/Barrieres.c.obj CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/menuprincipal.c.obj
+build ing1_quoridor_2024_groupe10_4.exe: C_EXECUTABLE_LINKER__ing1_quoridor_2024_groupe10_4_Debug CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/main.c.obj CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/sousprogramme.c.obj CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/PartieGraphique.c.obj CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/Barrieres.c.obj CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/MenuPrincipal.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ing1_quoridor_2024_groupe10_4.dir

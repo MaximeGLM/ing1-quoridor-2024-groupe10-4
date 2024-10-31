@@ -9,6 +9,6 @@ add_executable(ing1_quoridor_2024_groupe10_4
     main.c
     sousprogramme.c
     sousprogramme.h
-        partiegraphique.c
+        PartieGraphique.c
         Barrieres.c
-        menuprincipal.c)
+        MenuPrincipal.c)
