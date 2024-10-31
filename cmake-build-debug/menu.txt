@@ -1,0 +1,24 @@
+         |     | ||||||  |      | |     |
+         ||   || |       ||     | |     |
+         | | | | |       | |    | |     |
+         |  |  | ||||||  |  |   | |     |
+         |     | |       |   |  | |     |     
+         |     | |       |    | | |     |
+         |     | ||||||  |      |  |||||    
+         ================================
+
+                   QUORIDOR ECE
+                        ___
+                       /|||\
+                       |||||
+                       /|||\
+                      /|||||\
+                     /|||||||\
+                    /|||||||||\
+                   /|||||||||||\
+
+           1) LANCER UNE NOUVELLE PARTIE
+	   2) REPRENDRE UNE PARTIE SAUVEGARDEE   
+	   3) AFFICHER L'AIDE
+	   4) AFFICHER LES SCORES DES JOUEURS  
+	   5) QUITTER LE JEU :(
