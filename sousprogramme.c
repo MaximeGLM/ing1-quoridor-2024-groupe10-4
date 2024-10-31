@@ -279,7 +279,7 @@ int deplacement2(int* lig2, int* col2) {
             return bas;
         }
     }
-    return 0; // Nenhum movimento detectado
+    return 0;
 }
 
 
@@ -394,9 +394,6 @@ int barrieres(){
                 gotoligcol(positiony - 2, positionx);
                 printf("%c", 186);
             }
-
-
         }
-
     }while(detection != '\r');
 }
