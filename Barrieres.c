@@ -8,45 +8,32 @@
 int barrieres(){
     int i;
     int positionx = 16;
-    int positiony = 1;
+    int positiony = 2;
     int detection;
+    int changementdaxes = 0;
+    gotoligcol(positiony - 1, positionx);
+    printf("%c", 186);
     gotoligcol(positiony, positionx);
     printf("%c", 186);
     gotoligcol(positiony + 1, positionx);
     printf("%c", 186);
-    gotoligcol(positiony + 2, positionx);
-    printf("%c", 186);
     do {
         detection = _getch();
         if (detection == '2') {
+            if (positiony < 16) {
 
-            if(positiony < 14) {
-                for(i = 1; i< 18; i++){
-                    gotoligcol(i, positionx);
-                    printf("%c", 32);
-                }
-
+                gotoligcol(positiony - 1, positionx);
+                printf("%c", 32);
+                gotoligcol(positiony, positionx);
+                printf("%c", 32);
+                gotoligcol(positiony + 1, positionx);
+                printf("%c", 32);
                 positiony = positiony + 2;
+                gotoligcol(positiony - 1, positionx);
+                printf("%c", 186);
                 gotoligcol(positiony, positionx);
                 printf("%c", 186);
                 gotoligcol(positiony + 1, positionx);
-                printf("%c", 186);
-                gotoligcol(positiony + 2, positionx);
-                printf("%c", 186);
-
-            }else if(positiony == 15){
-                for(i = 1; i< 18; i++){
-                    gotoligcol(i, positionx);
-                    printf("%c", 32);
-                }
-
-
-                positiony = positiony + 2;
-                gotoligcol(positiony, positionx);
-                printf("%c", 186);
-                gotoligcol(positiony - 1, positionx);
-                printf("%c", 186);
-                gotoligcol(positiony - 2, positionx);
                 printf("%c", 186);
             }
         }
@@ -54,65 +41,56 @@ int barrieres(){
         if(detection == '8'){
 
             if(positiony > 3) {
-                for(i = 1; i< 18; i++){
-                    gotoligcol(i, positionx);
-                    printf("%c", 32);
-                }
 
-                positiony = positiony - 2;
+                gotoligcol(positiony - 1, positionx);
+                printf("%c", 32);
                 gotoligcol(positiony, positionx);
-                printf("%c", 186);
+                printf("%c", 32);
+                gotoligcol(positiony + 1, positionx);
+                printf("%c", 32);
+                positiony = positiony - 2;
                 gotoligcol(positiony - 1, positionx);
                 printf("%c", 186);
-                gotoligcol(positiony - 2, positionx);
-                printf("%c", 186);
-            } else if(positiony == 3){
-                for(i = 1; i< 18; i++){
-                    gotoligcol(i, positionx);
-                    printf("%c", 32);
-                }
-
-                positiony = positiony - 2;
                 gotoligcol(positiony, positionx);
                 printf("%c", 186);
                 gotoligcol(positiony + 1, positionx);
-                printf("%c", 186);
-                gotoligcol(positiony + 2, positionx);
                 printf("%c", 186);
             }
 
         }
 
         if (detection == '4') {
-
             if(positionx > 4) {
-                for(i = 1; i< 36; i++){
-                    gotoligcol(positiony, i);
-                    printf("%c", 32);
-                }
-
-                positiony = positiony + 2;
+                gotoligcol(positiony, positionx - 2);
+                printf("%c", 32);
                 gotoligcol(positiony, positionx);
-                printf("%c", 186);
-                gotoligcol(positiony + 1, positionx);
-                printf("%c", 186);
-                gotoligcol(positiony + 2, positionx);
-                printf("%c", 186);
-
-            }else if(positiony == 15){
-                for(i = 1; i< 18; i++){
-                    gotoligcol(i, positionx);
-                    printf("%c", 32);
-                }
-
-
-                positiony = positiony + 2;
+                printf("%c", 32);
+                gotoligcol(positiony, positionx + 2);
+                printf("%c", 32);
+                positionx = positionx - 4;
+                gotoligcol(positiony, positionx - 2);
+                printf("%c", 205);
                 gotoligcol(positiony, positionx);
-                printf("%c", 186);
-                gotoligcol(positiony - 1, positionx);
-                printf("%c", 186);
-                gotoligcol(positiony - 2, positionx);
-                printf("%c", 186);
+                printf("%c", 205);
+                gotoligcol(positiony, positionx + 2);
+                printf("%c", 205);
+            }
+        }
+        if (detection == '6') {
+            if(positionx < 32) {
+                gotoligcol(positiony, positionx - 2);
+                printf("%c", 32);
+                gotoligcol(positiony, positionx);
+                printf("%c", 32);
+                gotoligcol(positiony, positionx + 2);
+                printf("%c", 32);
+                positionx = positionx + 4;
+                gotoligcol(positiony, positionx - 2);
+                printf("%c", 205);
+                gotoligcol(positiony, positionx);
+                printf("%c", 205);
+                gotoligcol(positiony, positionx + 2);
+                printf("%c", 205);
             }
         }
     }while(detection != '\r');
