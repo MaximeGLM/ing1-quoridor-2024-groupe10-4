@@ -1,0 +1,21 @@
+Index: cmake-build-debug/CMakeFiles/clion-Debug-log.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\"C:\\Program Files\\JetBrains\\CLion 2024.2.1\\bin\\cmake\\win\\x64\\bin\\cmake.exe\" -DCMAKE_BUILD_TYPE=Debug \"-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2024.2.1/bin/ninja/win/x64/ninja.exe\" -G Ninja -S C:\\Users\\maxgo\\CLionProjects\\ing1-quoridor-2024-groupe10-4 -B C:\\Users\\maxgo\\CLionProjects\\ing1-quoridor-2024-groupe10-4\\cmake-build-debug\r\n-- The C compiler identification is GNU 13.1.0\r\n-- Detecting C compiler ABI info\r\n-- Detecting C compiler ABI info - done\r\n-- Check for working C compiler: C:/Program Files/JetBrains/CLion 2024.2.1/bin/mingw/bin/gcc.exe - skipped\r\n-- Detecting C compile features\r\n-- Detecting C compile features - done\r\n-- Configuring done (1.5s)\r\n-- Generating done (0.0s)\r\n-- Build files have been written to: C:/Users/maxgo/CLionProjects/ing1-quoridor-2024-groupe10-4/cmake-build-debug\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/cmake-build-debug/CMakeFiles/clion-Debug-log.txt b/cmake-build-debug/CMakeFiles/clion-Debug-log.txt
+--- a/cmake-build-debug/CMakeFiles/clion-Debug-log.txt	(revision a0117fbfaef3a32758e1b7cb2b63053f8e089e3c)
++++ b/cmake-build-debug/CMakeFiles/clion-Debug-log.txt	(date 1730544594127)
+@@ -1,10 +1,0 @@
+-"C:\Program Files\JetBrains\CLion 2024.2.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2024.2.1/bin/ninja/win/x64/ninja.exe" -G Ninja -S C:\Users\maxgo\CLionProjects\ing1-quoridor-2024-groupe10-4 -B C:\Users\maxgo\CLionProjects\ing1-quoridor-2024-groupe10-4\cmake-build-debug
+--- The C compiler identification is GNU 13.1.0
+--- Detecting C compiler ABI info
+--- Detecting C compiler ABI info - done
+--- Check for working C compiler: C:/Program Files/JetBrains/CLion 2024.2.1/bin/mingw/bin/gcc.exe - skipped
+--- Detecting C compile features
+--- Detecting C compile features - done
+--- Configuring done (1.5s)
+--- Generating done (0.0s)
+--- Build files have been written to: C:/Users/maxgo/CLionProjects/ing1-quoridor-2024-groupe10-4/cmake-build-debug

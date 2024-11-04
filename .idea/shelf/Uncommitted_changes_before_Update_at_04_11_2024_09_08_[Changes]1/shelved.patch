@@ -1,0 +1,17 @@
+Index: cmake-build-debug/menu.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>         |     | ||||||  |      | |     |\r\n         ||   || |       ||     | |     |\r\n         | | | | |       | |    | |     |\r\n         |  |  | ||||||  |  |   | |     |\r\n         |     | |       |   |  | |     |     \r\n         |     | |       |    | | |     |\r\n         |     | ||||||  |      |  |||||    \r\n         ================================\r\n\r\n                   QUORIDOR ECE\r\n                        ___\r\n                       /|||\\\r\n                       |||||\r\n                       /|||\\\r\n                      /|||||\\\r\n                     /|||||||\\\r\n                    /|||||||||\\\r\n                   /|||||||||||\\\r\n\r\n        1) LANCER UNE NOUVELLE PARTIE\r\n        2) REPRENDRE UNE PARTIE SAUVEGARDEE\r\n        3) AFFICHER L'AIDE\r\n        4) AFFICHER LES SCORES DES JOUEURS\r\n        5) QUITTER\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/cmake-build-debug/menu.txt b/cmake-build-debug/menu.txt
+--- a/cmake-build-debug/menu.txt	(revision a0117fbfaef3a32758e1b7cb2b63053f8e089e3c)
++++ b/cmake-build-debug/menu.txt	(date 1730707551054)
+@@ -21,4 +21,4 @@
+         2) REPRENDRE UNE PARTIE SAUVEGARDEE
+         3) AFFICHER L'AIDE
+         4) AFFICHER LES SCORES DES JOUEURS
+-        5) QUITTER
++        5) QUITTER
+\ No newline at end of file
