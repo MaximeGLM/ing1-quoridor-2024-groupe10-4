@@ -27,7 +27,7 @@ int main() {
     gotoligcol(lig1, col1);
     printf("%c", j1);
 
-    //barrieres();
+    barrieres();
     // Game loop
     while (1) {
 
