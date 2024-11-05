@@ -21,7 +21,10 @@ int barrieres(){
         detection = _getch();
         if (detection == '2') {
             if (positiony < 16) {
-
+                gotoligcol(positiony, positionx + 2);
+                printf("%c", 32);
+                gotoligcol(positiony, positionx - 2);
+                printf("%c", 32);
                 gotoligcol(positiony - 1, positionx);
                 printf("%c", 32);
                 gotoligcol(positiony, positionx);
@@ -41,7 +44,10 @@ int barrieres(){
         if(detection == '8'){
 
             if(positiony > 3) {
-
+                gotoligcol(positiony, positionx + 2);
+                printf("%c", 32);
+                gotoligcol(positiony, positionx - 2);
+                printf("%c", 32);
                 gotoligcol(positiony - 1, positionx);
                 printf("%c", 32);
                 gotoligcol(positiony, positionx);
@@ -61,6 +67,10 @@ int barrieres(){
 
         if (detection == '4') {
             if(positionx > 4) {
+                gotoligcol(positiony + 1, positionx);
+                printf("%c", 32);
+                gotoligcol(positiony - 1, positionx);
+                printf("%c", 32);
                 gotoligcol(positiony, positionx - 2);
                 printf("%c", 32);
                 gotoligcol(positiony, positionx);
@@ -78,6 +88,10 @@ int barrieres(){
         }
         if (detection == '6') {
             if(positionx < 32) {
+                gotoligcol(positiony + 1, positionx);
+                printf("%c", 32);
+                gotoligcol(positiony - 1, positionx);
+                printf("%c", 32);
                 gotoligcol(positiony, positionx - 2);
                 printf("%c", 32);
                 gotoligcol(positiony, positionx);
