@@ -5,12 +5,43 @@
 #include "sousprogramme.h"
 #include <conio.h>
 
+void EffacerLaBarrière(int y,int x) {
+    gotoligcol(y, x + 2);
+    printf("%c", 32);
+    gotoligcol(y, x - 2);
+    printf("%c", 32);
+    gotoligcol(y - 1, x);
+    printf("%c", 32);
+    gotoligcol(y, x);
+    printf("%c", 32);
+    gotoligcol(y + 1, x);
+    printf("%c", 32);
+}
+
+void AfficherLaBarrièreVerticale(int y,int x) {
+    gotoligcol(y - 1, x);
+    printf("%c", 186);
+    gotoligcol(y, x);
+    printf("%c", 186);
+    gotoligcol(y + 1, x);
+    printf("%c", 186);
+}
+
+void AfficherLaBarrièreHorizontale(int y,int x) {
+    gotoligcol(y, x - 2);
+    printf("%c", 205);
+    gotoligcol(y, x);
+    printf("%c", 205);
+    gotoligcol(y, x + 2);
+    printf("%c", 205);
+}
+
 int barrieres(){
-    int i;
+
     int positionx = 16;
     int positiony = 2;
     int detection;
-    int changementdaxes = 0;
+
     gotoligcol(positiony - 1, positionx);
     printf("%c", 186);
     gotoligcol(positiony, positionx);
@@ -21,90 +52,34 @@ int barrieres(){
         detection = _getch();
         if (detection == '2') {
             if (positiony < 16) {
-                gotoligcol(positiony, positionx + 2);
-                printf("%c", 32);
-                gotoligcol(positiony, positionx - 2);
-                printf("%c", 32);
-                gotoligcol(positiony - 1, positionx);
-                printf("%c", 32);
-                gotoligcol(positiony, positionx);
-                printf("%c", 32);
-                gotoligcol(positiony + 1, positionx);
-                printf("%c", 32);
+                EffacerLaBarrière(positiony, positionx);
                 positiony = positiony + 2;
-                gotoligcol(positiony - 1, positionx);
-                printf("%c", 186);
-                gotoligcol(positiony, positionx);
-                printf("%c", 186);
-                gotoligcol(positiony + 1, positionx);
-                printf("%c", 186);
+                AfficherLaBarrièreVerticale(positiony, positionx);
             }
         }
 
         if(detection == '8'){
 
             if(positiony > 3) {
-                gotoligcol(positiony, positionx + 2);
-                printf("%c", 32);
-                gotoligcol(positiony, positionx - 2);
-                printf("%c", 32);
-                gotoligcol(positiony - 1, positionx);
-                printf("%c", 32);
-                gotoligcol(positiony, positionx);
-                printf("%c", 32);
-                gotoligcol(positiony + 1, positionx);
-                printf("%c", 32);
+                EffacerLaBarrière(positiony, positionx);
                 positiony = positiony - 2;
-                gotoligcol(positiony - 1, positionx);
-                printf("%c", 186);
-                gotoligcol(positiony, positionx);
-                printf("%c", 186);
-                gotoligcol(positiony + 1, positionx);
-                printf("%c", 186);
+                AfficherLaBarrièreVerticale(positiony, positionx);
             }
 
         }
 
         if (detection == '4') {
             if(positionx > 4) {
-                gotoligcol(positiony + 1, positionx);
-                printf("%c", 32);
-                gotoligcol(positiony - 1, positionx);
-                printf("%c", 32);
-                gotoligcol(positiony, positionx - 2);
-                printf("%c", 32);
-                gotoligcol(positiony, positionx);
-                printf("%c", 32);
-                gotoligcol(positiony, positionx + 2);
-                printf("%c", 32);
+                EffacerLaBarrière(positiony, positionx);
                 positionx = positionx - 4;
-                gotoligcol(positiony, positionx - 2);
-                printf("%c", 205);
-                gotoligcol(positiony, positionx);
-                printf("%c", 205);
-                gotoligcol(positiony, positionx + 2);
-                printf("%c", 205);
+                AfficherLaBarrièreHorizontale(positiony, positionx);
             }
         }
         if (detection == '6') {
             if(positionx < 32) {
-                gotoligcol(positiony + 1, positionx);
-                printf("%c", 32);
-                gotoligcol(positiony - 1, positionx);
-                printf("%c", 32);
-                gotoligcol(positiony, positionx - 2);
-                printf("%c", 32);
-                gotoligcol(positiony, positionx);
-                printf("%c", 32);
-                gotoligcol(positiony, positionx + 2);
-                printf("%c", 32);
+                EffacerLaBarrière(positiony, positionx);
                 positionx = positionx + 4;
-                gotoligcol(positiony, positionx - 2);
-                printf("%c", 205);
-                gotoligcol(positiony, positionx);
-                printf("%c", 205);
-                gotoligcol(positiony, positionx + 2);
-                printf("%c", 205);
+                AfficherLaBarrièreHorizontale(positiony, positionx);
             }
         }
     }while(detection != '\r');

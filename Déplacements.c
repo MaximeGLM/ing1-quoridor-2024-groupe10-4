@@ -1,3 +1,6 @@
+//
+// Created by maxgo on 08/11/2024.
+//
 #include "sousprogramme.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -57,5 +60,3 @@ int deplacement2(int* lig2, int* col2) {
     }
     return 0;
 }
-
-
