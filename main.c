@@ -17,6 +17,8 @@ int main() {
     char j2 = 208;
     int lig1 = 17, col1 = 18;
     int lig2 = 1, col2 = 18;
+    int coordonnéesbarrières[3][20];
+    int nombrebarrière = 0;
 
     menu(nom1, nom2, &nj);
     clearConsole();
@@ -27,7 +29,9 @@ int main() {
     gotoligcol(lig1, col1);
     printf("%c", j1);
 
-    barrieres();
+    barrieres(coordonnéesbarrières, nombrebarrière);
+    nombrebarrière = nombrebarrière + 1;
+
     // Game loop
     while (1) {
 
@@ -94,7 +98,5 @@ int main() {
         usleep(100000);
 #endif
     }
-
-
     return 0;
 }

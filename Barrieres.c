@@ -36,11 +36,12 @@ void AfficherLaBarrièreHorizontale(int y,int x) {
     printf("%c", 205);
 }
 
-int barrieres(){
+int barrieres(int coordonnéesbarrières[3][20], int nombrebarrière){
 
     int positionx = 16;
     int positiony = 2;
     int detection;
+    int sens =0;
 
     gotoligcol(positiony - 1, positionx);
     printf("%c", 186);
@@ -55,6 +56,7 @@ int barrieres(){
                 EffacerLaBarrière(positiony, positionx);
                 positiony = positiony + 2;
                 AfficherLaBarrièreVerticale(positiony, positionx);
+                sens = 0;
             }
         }
 
@@ -64,6 +66,7 @@ int barrieres(){
                 EffacerLaBarrière(positiony, positionx);
                 positiony = positiony - 2;
                 AfficherLaBarrièreVerticale(positiony, positionx);
+                sens = 0;
             }
 
         }
@@ -73,6 +76,7 @@ int barrieres(){
                 EffacerLaBarrière(positiony, positionx);
                 positionx = positionx - 4;
                 AfficherLaBarrièreHorizontale(positiony, positionx);
+                sens = 1;
             }
         }
         if (detection == '6') {
@@ -80,7 +84,11 @@ int barrieres(){
                 EffacerLaBarrière(positiony, positionx);
                 positionx = positionx + 4;
                 AfficherLaBarrièreHorizontale(positiony, positionx);
+                sens = 1;
             }
         }
     }while(detection != '\r');
+    coordonnéesbarrières[0][nombrebarrière] = positionx;
+    coordonnéesbarrières[1][nombrebarrière] = positiony;
+    coordonnéesbarrières[2][nombrebarrière] = sens;
 }

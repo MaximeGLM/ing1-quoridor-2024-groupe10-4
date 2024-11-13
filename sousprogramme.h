@@ -1,6 +1,7 @@
 //
 // Created by pedro on 18/10/2024.
 //
+#define QuatitédeBarrières 20
 
 #ifndef PROJETINFO1_0_SOUSPROGRAMME_H
 #define PROJETINFO1_0_SOUSPROGRAMME_H
