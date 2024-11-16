@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include "sousprogramme.h"
 
-void initialisation(char plateaudejeu[19][19]) {
+void bordures(char plateaudejeu[19][19]) {
     // On place le contour du plateau
     for (int i=1; i<=18;i++) {
         plateaudejeu[0][i] = 196;
@@ -25,6 +25,10 @@ void initialisation(char plateaudejeu[19][19]) {
     plateaudejeu[0][18] = 191;
     plateaudejeu[18][0] = 192;
     plateaudejeu[18][18] = 217;
+}
+
+void afficherpions(char plateau[19][19]) {
+
 }
 
 void plateau(char nom1[], char nj, char jeton) {
@@ -58,8 +62,7 @@ void plateau(char nom1[], char nj, char jeton) {
             "Murs restants:"
     };
 
-
-    initialisation(plateaudejeu);
+    bordures(plateaudejeu);
 
     for (int i = 0; i < 19; i++) {
         for (int j = 0; j < 19; j++) {

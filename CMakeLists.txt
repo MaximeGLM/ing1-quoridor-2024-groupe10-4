@@ -11,4 +11,5 @@ add_executable(ing1_quoridor_2024_groupe10_4
         PartieGraphique.c
         Barrieres.c
         MenuPrincipal.c
-        Deplacements.c)
+        Deplacements.c
+        DeroulementPartie.c)

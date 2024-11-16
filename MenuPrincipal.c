@@ -43,11 +43,11 @@ int menu(char *nom1, char *nom2, char *nj) {
         // Fermer le fichier
         fclose(fichier);
 
-        char option = _getch(); // Obtenha a entrada do usuário
+        char option = _getch();
         if (option == '1') {
-            clearConsole(); // Limpa a tela
+            clearConsole();
 
-            FILE *fichier2;  // Déclaration d'un pointeur de fichier
+            FILE *fichier2;
             char c2;        // Variable pour stocker chaque caractère lu
 
             // Ouvrir le fichier en mode lecture
@@ -125,7 +125,7 @@ int menu(char *nom1, char *nom2, char *nj) {
             // Fermer le fichier
             fclose(fichier3);
             char sortir = _getch();
-            if(sortir == '27'){
+            if(sortir == 27){
                 break;
             }
         }

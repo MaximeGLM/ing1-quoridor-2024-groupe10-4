@@ -176,6 +176,30 @@ Deplacements.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\build.make CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/Deplacements.c.s
 .PHONY : Deplacements.c.s
 
+DeroulementPartie.obj: DeroulementPartie.c.obj
+.PHONY : DeroulementPartie.obj
+
+# target to build an object file
+DeroulementPartie.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\build.make CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/DeroulementPartie.c.obj
+.PHONY : DeroulementPartie.c.obj
+
+DeroulementPartie.i: DeroulementPartie.c.i
+.PHONY : DeroulementPartie.i
+
+# target to preprocess a source file
+DeroulementPartie.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\build.make CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/DeroulementPartie.c.i
+.PHONY : DeroulementPartie.c.i
+
+DeroulementPartie.s: DeroulementPartie.c.s
+.PHONY : DeroulementPartie.s
+
+# target to generate assembly for a file
+DeroulementPartie.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\build.make CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/DeroulementPartie.c.s
+.PHONY : DeroulementPartie.c.s
+
 MenuPrincipal.obj: MenuPrincipal.c.obj
 .PHONY : MenuPrincipal.obj
 
@@ -263,6 +287,9 @@ help:
 	@echo ... Deplacements.obj
 	@echo ... Deplacements.i
 	@echo ... Deplacements.s
+	@echo ... DeroulementPartie.obj
+	@echo ... DeroulementPartie.i
+	@echo ... DeroulementPartie.s
 	@echo ... MenuPrincipal.obj
 	@echo ... MenuPrincipal.i
 	@echo ... MenuPrincipal.s

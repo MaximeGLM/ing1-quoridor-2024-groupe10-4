@@ -12,5 +12,7 @@ void gotoligcol( int lig, int col );
 int deplacement(int* lig, int* col);
 int deplacement2(int* lig2, int* col2);
 int barrieres();
+void DeroulementPartie2j();
+int Deplacement();
 
 #endif //PROJETINFO1_0_SOUSPROGRAMME_H
