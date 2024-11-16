@@ -12,7 +12,7 @@ int conditionvictoire(int PosXj1,int PosXj2) {
         return 1;
     }
 
-    if (PosXj2 == 1) {
+    if (PosXj2 == 17) {
         return 2;
     }
 
@@ -21,7 +21,7 @@ int conditionvictoire(int PosXj1,int PosXj2) {
 void DeroulementPartie2j(char * nom1,char * nom2, int nombrejoueur) {
     int victoire = 0;
     int choix = 0;
-    int PosXj1 = 17, PosXj2 = 1 , PosYj1 = 18, PosYj2 = 18;
+    int PosXj1 = 17, PosXj2 = 15 , PosYj1 = 18, PosYj2 = 18;
     int coordonnéesbarrières[3][20];
     int nombrebarrières=0;
 
@@ -42,7 +42,7 @@ void DeroulementPartie2j(char * nom1,char * nom2, int nombrejoueur) {
             case '4': ; break;// annuler la dernière action
         }
         if (conditionvictoire(PosXj1, PosYj2)==1) {
-            return 1;
+            return;
         }
         clearConsole();
         plateau(nom1, nombrejoueur, jeton2);
@@ -58,8 +58,8 @@ void DeroulementPartie2j(char * nom1,char * nom2, int nombrejoueur) {
             case '3': ; break;// sauter son tour
             case '4': ; break;// annuler la dernière action
         }
-        if (conditionvictoire(PosXj1, PosYj2)==2) {
-            return 2;
+        if (conditionvictoire(PosXj1, PosXj2)==2) {
+            return;
         }
     }
 }

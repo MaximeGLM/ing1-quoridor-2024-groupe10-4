@@ -23,11 +23,8 @@ int menu(char *nom1, char *nom2, char *nj) {
     do {
         clearConsole();
 
-        FILE *fichier;
+        FILE *fichier = fopen("../menus/menu.txt", "r");
         char c;
-
-        // Ouvrir le fichier en mode lecture
-        fichier = fopen("menu.txt", "r");
 
         // Vérifier si le fichier a été ouvert avec succès
         if (fichier == NULL) {
@@ -47,11 +44,8 @@ int menu(char *nom1, char *nom2, char *nj) {
         if (option == '1') {
             clearConsole();
 
-            FILE *fichier2;
-            char c2;        // Variable pour stocker chaque caractère lu
-
-            // Ouvrir le fichier en mode lecture
-            fichier2 = fopen("menu1.txt", "r");
+            FILE *fichier2 = fopen("../menus/menuNouvellePartie.txt", "r");
+            char c2;
 
             // Vérifier si le fichier a été ouvert avec succès
             if (fichier2 == NULL) {
@@ -105,11 +99,8 @@ int menu(char *nom1, char *nom2, char *nj) {
             // Adicione seu código para a opção 2 aqui
         } else if (option == '3') {
             clearConsole();
-            FILE *fichier3;
+            FILE *fichier3 = fopen("../menus/menuAide.txt", "r");
             char c3;
-
-            // Ouvrir le fichier en mode lecture
-            fichier3 = fopen("menuAide.txt", "r");
 
             // Vérifier si le fichier a été ouvert avec succès
             if (fichier3 == NULL) {
