@@ -36,7 +36,7 @@ void AfficherLaBarrièreHorizontale(int y,int x) {
     printf("%c", 205);
 }
 
-int barrieres(int coordonnéesbarrières[3][20], int nombrebarrière){
+int barrieres(int coordonnéesbarrières[3][20], int* nombrebarrière){
 
     int positionx = 16;
     int positiony = 2;
@@ -87,8 +87,11 @@ int barrieres(int coordonnéesbarrières[3][20], int nombrebarrière){
                 sens = 1;
             }
         }
+        afficherBarrières(coordonnéesbarrières, *nombrebarrière);
     }while(detection != '\r');
-    coordonnéesbarrières[0][nombrebarrière] = positionx;
-    coordonnéesbarrières[1][nombrebarrière] = positiony;
-    coordonnéesbarrières[2][nombrebarrière] = sens;
+    coordonnéesbarrières[0][*nombrebarrière] = positionx;
+    coordonnéesbarrières[1][*nombrebarrière] = positiony;
+    coordonnéesbarrières[2][*nombrebarrière] = sens;
+    *nombrebarrière=*nombrebarrière+1;
+    return 0;
 }

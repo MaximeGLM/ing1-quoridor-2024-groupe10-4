@@ -109,7 +109,7 @@ int menu(char *nom1, char *nom2, char *nj) {
             char c3;
 
             // Ouvrir le fichier en mode lecture
-            fichier3 = fopen("menu3.txt", "r");
+            fichier3 = fopen("menuAide.txt", "r");
 
             // Vérifier si le fichier a été ouvert avec succès
             if (fichier3 == NULL) {
