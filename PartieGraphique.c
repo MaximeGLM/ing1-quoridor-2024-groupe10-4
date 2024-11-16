@@ -6,20 +6,16 @@
 #include "sousprogramme.h"
 
 void initialisation(char plateaudejeu[19][19]) {
-
-    //mise en place des contours du plateau
-
+    // On place le contour du plateau
     for (int i=1; i<=18;i++) {
         plateaudejeu[0][i] = 196;
     }
-
     for (int i=1; i<=18;i++) {
         plateaudejeu[18][i] = 196;
     }
     for (int i=1; i<=18;i++) {
         plateaudejeu[i][0] = 179;
     }
-
     for (int i=1; i<=18;i++) {
         plateaudejeu[i][18] = 179;
     }
@@ -34,8 +30,6 @@ void initialisation(char plateaudejeu[19][19]) {
 void plateau(char nom1[], char nj, char jeton) {
 
     int score = 10, murs;
-
-
 
     char plateaudejeu[19][19] = {
             {254, 254, 32, 254, 32, 254, 32, 254, 32, 254, 32, 254, 32, 254, 32, 254, 32, 254, 32},
@@ -66,7 +60,7 @@ void plateau(char nom1[], char nj, char jeton) {
 
 
     initialisation(plateaudejeu);
-    // Display the game board
+
     for (int i = 0; i < 19; i++) {
         for (int j = 0; j < 19; j++) {
             printf("%c ", plateaudejeu[i][j]);

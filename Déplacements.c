@@ -1,3 +1,6 @@
+//
+// Created by maxgo on 08/11/2024.
+//
 #include "sousprogramme.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -16,8 +19,10 @@ void gotoligcol( int lig, int col )
 
 
 int deplacement(int* lig, int* col) {
-    if (_kbhit()) {
-        char haut = _getch();
+    char haut;
+
+    do {
+        haut = _getch();
         if (haut == '8' && *lig > 1) {
             *lig = *lig - 2;
             return haut; // Indicate a movement action
@@ -31,7 +36,7 @@ int deplacement(int* lig, int* col) {
             *col = *col - 4;
             return haut;
         }
-    }
+    }while (haut != '8' && haut != '2' && haut != '6' && haut != '4');
     return 0; // No movement detected
 }
 
@@ -55,5 +60,3 @@ int deplacement2(int* lig2, int* col2) {
     }
     return 0;
 }
-
-
