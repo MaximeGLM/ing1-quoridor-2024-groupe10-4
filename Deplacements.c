@@ -16,7 +16,32 @@ void gotoligcol( int lig, int col )
     mycoord.Y = lig;
     SetConsoleCursorPosition( GetStdHandle( STD_OUTPUT_HANDLE ), mycoord );
 }
+int Deplacement(int* PosX, int* PosY) {
+    char choix;
 
+    do {
+        choix = _getch();
+        switch (choix) {
+            case '8':
+                if ( *PosX > 1 ) {
+                    *PosX = *PosX - 2; return choix;
+                } break;
+            case '2':
+                if ( *PosX < 17 ) {
+                    *PosX = *PosX + 2; return choix;
+                } break;
+
+            case '4':
+                if (  *PosY > 2) {
+                    *PosY = *PosY - 4; return choix;
+                } break;
+            case '6':
+                if ( *PosY < 32) {
+                    *PosY = *PosY + 4; return choix;
+                } break;
+        }
+    }while (1);
+}
 
 int deplacement(int* lig, int* col) {
     char haut;
