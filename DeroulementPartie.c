@@ -21,7 +21,7 @@ int conditionvictoire(int PosXj1,int PosXj2) {
 void DeroulementPartie2j(char * nom1,char * nom2, int nombrejoueur) {
     int victoire = 0;
     int choix = 0;
-    int PosXj1 = 17, PosXj2 = 15 , PosYj1 = 18, PosYj2 = 18;
+    int PosXj1 = 17, PosXj2 = 1 , PosYj1 = 18, PosYj2 = 18;
     int coordonnéesbarrières[3][20];
     int nombrebarrières=0;
 
