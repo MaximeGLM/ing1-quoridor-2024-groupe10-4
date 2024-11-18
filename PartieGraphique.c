@@ -38,7 +38,18 @@ void afficherBarrières(int coordonnéesbarrières[3][20], int nombrebarriere) {
     }
 }
 
-void plateau(char nom1[], char nj, char jeton) {
+void ActualiserPositionPions(int PosXj1,int PosYj1,int PosXj2,int PosYj2,int PosXj3,int PosYj3,int PosXj4,int PosYj4,char jeton1,char jeton2,char jeton3,char jeton4) {
+    gotoligcol(PosXj1, PosYj1);
+    printf("%c", jeton1);
+    gotoligcol(PosXj2, PosYj2);
+    printf("%c", jeton2);
+    gotoligcol(PosXj3, PosYj3);
+    printf("%c", jeton3);
+    gotoligcol(PosXj4, PosYj4);
+    printf("%c", jeton4);
+}
+
+void plateau(char nom1[], char nj, char jeton,int coordonnéesbarrières[3][20],int nombrebarrières) {
 
     int score = 10, murs;
 
@@ -90,11 +101,12 @@ void plateau(char nom1[], char nj, char jeton) {
             printf("\n");
         }
     }
+    afficherBarrières(coordonnéesbarrières, nombrebarrières);
+    gotoligcol(20,20);
     printf("\n");
     printf("Actions possibles:\n");
     printf("1) Deplacer son pion\n");
     printf("2) Poser une barriere\n");
     printf("3) Passer son tour\n");
     printf("4) Annuler la derniere action\n");
-
 }
