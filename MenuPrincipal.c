@@ -18,7 +18,7 @@ void clearConsole() {
 
 
 
-int menu(char *nom1, char *nom2, char *nj) {
+int menu(char *nom1, char *nom2, char *nj, char *nom3, char *nom4) {
     int stoop;
     do {
         clearConsole();
@@ -94,6 +94,43 @@ int menu(char *nom1, char *nom2, char *nj) {
                 printf("                   Joueur 2:\n");
                 printf("                   Joueur 3:\n");
                 printf("                   Joueur 4:\n");
+                gotoligcol(25, 29);
+                for (i = 0; i < 15; i++) {
+                    nom1[i] = _getch();
+                    printf("%c", nom1[i]);
+                    if (nom1[i] == '\r') {
+                        nom1[i] = '\0';
+                        break;
+                    }
+                }
+                gotoligcol(26, 29);
+                for (i = 0; i < 15; i++) {
+                    nom2[i] = _getch();
+                    printf("%c", nom2[i]);
+                    if (nom2[i] == '\r') {
+                        nom2[i] = '\0';
+                        break;
+                    }
+                }
+                gotoligcol(27, 29);
+                for (i = 0; i < 15; i++) {
+                    nom3[i] = _getch();
+                    printf("%c", nom3[i]);
+                    if (nom3[i] == '\r') {
+                        nom3[i] = '\0';
+                        break;
+                    }
+                }
+                gotoligcol(28, 29);
+                for (i = 0; i < 15; i++) {
+                    nom4[i] = _getch();
+                    printf("%c", nom4[i]);
+                    if (nom4[i] == '\r') {
+                        nom4[i] = '\0';
+                        break;
+                    }
+                }
+                stoop = 10;
             }
         } else if (option == '2') {
             // Adicione seu código para a opção 2 aqui

@@ -7,15 +7,16 @@
 #define PROJETINFO1_0_SOUSPROGRAMME_H
 void plateau(char nom1[], char nj, char jeton);
 void clearConsole();
-void afficherBarrières(int coordonnéesbarrières[3][20], int nombrebarriere);
-int menu(char *nom1, char *nom2, char *nj);
-void gotoligcol( int lig, int col );
-int deplacement(int* lig, int* col);
-int deplacement2(int* lig2, int* col2);
+void afficherBarrières();
+int menu();
+void gotoligcol();
+int deplacement();
+int deplacement2();
 int barrieres();
-void AfficherLaBarrièreHorizontale(int y,int x);
-void AfficherLaBarrièreVerticale(int y,int x);
-void DeroulementPartie2j();
+void AfficherLaBarrièreHorizontale();
+void AfficherLaBarrièreVerticale();
+void DeroulementPartie2j(char * nom1,char * nom2, char nombrejoueur);
+void DeroulementPartie4j(char * nom1,char * nom2,char * nom3, char * nom4, char NombreJoueur);
 int Deplacement();
 
 #endif //PROJETINFO1_0_SOUSPROGRAMME_H

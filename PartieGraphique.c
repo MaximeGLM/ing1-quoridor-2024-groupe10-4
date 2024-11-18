@@ -28,7 +28,7 @@ void bordures(char plateaudejeu[19][19]) {
 }
 
 void afficherBarrières(int coordonnéesbarrières[3][20], int nombrebarriere) {
-    for (int i=0; i<=nombrebarriere;i++) {
+    for (int i=0; i<nombrebarriere;i++) {
         if (coordonnéesbarrières[2][i]==1) {
             AfficherLaBarrièreHorizontale(coordonnéesbarrières[1][i],coordonnéesbarrières[0][i] );
         }

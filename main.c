@@ -13,10 +13,15 @@ int main() {
     char nombrejoueur;
     char nom1[15];
     char nom2[15];
+    char nom3[15];
+    char nom4[15];
 
-    menu(nom1, nom2, &nombrejoueur);
+    menu(nom1, nom2, &nombrejoueur, nom3, nom4);
     clearConsole();
-    DeroulementPartie2j(nom1, nom2, &nombrejoueur);
+    switch (nombrejoueur) {
+        case '2': DeroulementPartie2j(nom1, nom2, nombrejoueur); break;
+        case '4': DeroulementPartie4j(nom1, nom2, nom3, nom4, nombrejoueur); break;
+    }
 
     return 0;
 
