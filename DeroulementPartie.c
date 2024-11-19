@@ -55,9 +55,10 @@ void DeroulementPartie2j(char * nom1,char * nom2, char nombrejoueur) {
                 case '1': Deplacement(&PosXj1, &PosYj1); break;
                 case '2': barrieres(coordonnéesbarrières, &nombrebarrières); break;
                 case '4': ; break;// annuler la dernière action
+                case '5': Menupause(); break;//lenu pause
             }
             if (choix == '3') break;// passer son tour
-        } while (choix != '1' || choix != '2' || choix != '3' || choix != '4');// annuler la dernière action
+        } while (choix != '1' || choix != '2' || choix != '3' || choix != '4'|| choix != '5');// annuler la dernière action
 
         if (conditionvictoire(PosXj1, PosYj2,0,0)==1) {
             return;

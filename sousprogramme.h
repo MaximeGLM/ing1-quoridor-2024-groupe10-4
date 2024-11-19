@@ -19,5 +19,5 @@ void AfficherLaBarrièreVerticale();
 void DeroulementPartie2j(char * nom1,char * nom2, char nombrejoueur);
 void DeroulementPartie4j(char * nom1,char * nom2,char * nom3, char * nom4, char NombreJoueur);
 int Deplacement();
-
+void Menupause();
 #endif //PROJETINFO1_0_SOUSPROGRAMME_H
