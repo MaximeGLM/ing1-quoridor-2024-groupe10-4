@@ -26,28 +26,6 @@ void bordures(char plateaudejeu[19][19]) {
     plateaudejeu[18][0] = 192;
     plateaudejeu[18][18] = 217;
 }
-void Menupause() {
-    clearConsole();
-
-    FILE *fichier4 = fopen("../menus/Menupause", "r");
-    char c;
-
-    // Vérifier si le fichier a été ouvert avec succès
-    if (fichier4 == NULL) {
-        perror("Erreur à l'ouverture du fichier Menupause");
-        return 1;  // Retourner une erreur
-    }
-
-    // Lire et afficher le contenu du fichier caractère par caractère
-    while ((c = fgetc(fichier4)) != EOF) {
-        putchar(c);  // Afficher le caractère dans la console
-    }
-
-    // Fermer le fichier
-    fclose(fichier4);
-
-}
-
 
 void afficherBarrières(int coordonnéesbarrières[3][20], int nombrebarriere) {
     for (int i=0; i<nombrebarriere;i++) {

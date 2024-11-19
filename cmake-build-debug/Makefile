@@ -200,6 +200,30 @@ DeroulementPartie.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\build.make CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/DeroulementPartie.c.s
 .PHONY : DeroulementPartie.c.s
 
+MenuPause.obj: MenuPause.c.obj
+.PHONY : MenuPause.obj
+
+# target to build an object file
+MenuPause.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\build.make CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/MenuPause.c.obj
+.PHONY : MenuPause.c.obj
+
+MenuPause.i: MenuPause.c.i
+.PHONY : MenuPause.i
+
+# target to preprocess a source file
+MenuPause.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\build.make CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/MenuPause.c.i
+.PHONY : MenuPause.c.i
+
+MenuPause.s: MenuPause.c.s
+.PHONY : MenuPause.s
+
+# target to generate assembly for a file
+MenuPause.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\build.make CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/MenuPause.c.s
+.PHONY : MenuPause.c.s
+
 MenuPrincipal.obj: MenuPrincipal.c.obj
 .PHONY : MenuPrincipal.obj
 
@@ -290,6 +314,9 @@ help:
 	@echo ... DeroulementPartie.obj
 	@echo ... DeroulementPartie.i
 	@echo ... DeroulementPartie.s
+	@echo ... MenuPause.obj
+	@echo ... MenuPause.i
+	@echo ... MenuPause.s
 	@echo ... MenuPrincipal.obj
 	@echo ... MenuPrincipal.i
 	@echo ... MenuPrincipal.s

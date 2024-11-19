@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/Deplacements.c.obj.d"
   "CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/DeroulementPartie.c.obj"
   "CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/DeroulementPartie.c.obj.d"
+  "CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/MenuPause.c.obj"
+  "CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/MenuPause.c.obj.d"
   "CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/MenuPrincipal.c.obj"
   "CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/MenuPrincipal.c.obj.d"
   "CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/PartieGraphique.c.obj"
