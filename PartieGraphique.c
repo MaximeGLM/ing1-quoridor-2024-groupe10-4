@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include "sousprogramme.h"
 
+
 void bordures(char plateaudejeu[19][19]) {
     // On place le contour du plateau
     for (int i=1; i<=18;i++) {

@@ -16,27 +16,44 @@ void gotoligcol( int lig, int col )
     mycoord.Y = lig;
     SetConsoleCursorPosition( GetStdHandle( STD_OUTPUT_HANDLE ), mycoord );
 }
+char lirecaracconsole(int lignee, int colonnee) {
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+    unsigned char ch;
+    COORD coord = {colonnee, lignee};
+    DWORD read;
+
+    if (ReadConsoleOutputCharacter(hConsole, &ch, 1, coord, &read)) {
+        return ch;
+    } else {
+        return '\0';
+    }
+}
+
 int Deplacement(int* PosX, int* PosY) {
     char choix;
-
+    int carac1 = (unsigned char) lirecaracconsole(*PosX + 1,*PosY);
+    int carac2 = (unsigned char) lirecaracconsole(*PosX - 1,*PosY);
+    int carac3 = (unsigned char) lirecaracconsole(*PosX,*PosY + 2);
+    int carac4 = (unsigned char) lirecaracconsole(*PosX,*PosY - 2);
     do {
         choix = _getch();
         switch (choix) {
             case '8':
-                if ( *PosX > 1 ) {
+
+                if ( *PosX > 1 && carac2 != 205 && carac2 != 186) {
                     *PosX = *PosX - 2; return choix;
                 } break;
             case '2':
-                if ( *PosX < 17 ) {
+                if ( *PosX < 17 && carac1 != 205 && carac1 != 186  ) {
                     *PosX = *PosX + 2; return choix;
                 } break;
 
             case '4':
-                if (  *PosY > 2) {
+                if (  *PosY > 2  && carac4 != 205 && carac4 != 186 ) {
                     *PosY = *PosY - 4; return choix;
                 } break;
             case '6':
-                if ( *PosY < 32) {
+                if ( *PosY < 32 && carac3 != 205 && carac3 != 186) {
                     *PosY = *PosY + 4; return choix;
                 } break;
         }

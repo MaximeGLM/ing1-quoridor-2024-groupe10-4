@@ -5,6 +5,9 @@
 #include "sousprogramme.h"
 #include <conio.h>
 
+
+
+
 void EffacerLaBarrière(int y,int x) {
     gotoligcol(y, x + 2);
     printf("%c", 32);
@@ -40,7 +43,7 @@ int barrieres(int coordonnéesbarrières[3][20], int* nombrebarrière){
 
     int positionx = 16;
     int positiony = 2;
-    int detection;
+    char detection;
     int sens =0;
 
     gotoligcol(positiony - 1, positionx);

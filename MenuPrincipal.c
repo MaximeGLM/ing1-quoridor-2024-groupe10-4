@@ -6,7 +6,10 @@
 #include <stdlib.h>
 #include <conio.h>
 //Header auquel il est relié
+#include <unistd.h>
+
 #include "sousprogramme.h"
+#include <windows.h>
 
 void clearConsole() {
 #ifdef _WIN32

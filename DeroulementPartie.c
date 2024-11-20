@@ -58,7 +58,7 @@ void DeroulementPartie2j(char * nom1,char * nom2, char nombrejoueur) {
                 case '5': Menupause(); break;//lenu pause
             }
             if (choix == '3') break;// passer son tour
-        } while (choix != '1' || choix != '2' || choix != '3' || choix != '4'|| choix != '5');// annuler la dernière action
+        } while (choix != '1' && choix != '2' && choix != '3' && choix != '4'&& choix != '5');// annuler la dernière action
 
         if (conditionvictoire(PosXj1, PosYj2,0,0)==1) {
             return;
@@ -72,12 +72,12 @@ void DeroulementPartie2j(char * nom1,char * nom2, char nombrejoueur) {
         do {
             choix = getch();
             switch (choix) {
-                case '1': Deplacement(&PosXj1, &PosYj1); break;
+                case '1': Deplacement(&PosXj2, &PosYj2); break;
                 case '2': barrieres(coordonnéesbarrières, &nombrebarrières); break;
                 case '4': ; break;// annuler la dernière action
             }
             if (choix == '3') break;// passer son tour
-        } while (choix != '1' || choix != '2' || choix != '3' || choix != '4');
+        } while (choix != '1' && choix != '2' && choix != '3' && choix != '4');
         if (conditionvictoire(PosXj1, PosXj2,0,0)==2) {
             return;
         }
@@ -119,7 +119,7 @@ void DeroulementPartie4j(char * nom1,char * nom2,char * nom3, char * nom4, char 
                 case '4': ; break;// annuler la dernière action
             }
             if (choix == '3') break;// passer son tour
-        } while (choix != '1' || choix != '2' || choix != '3' || choix != '4');
+        } while (choix != '1' && choix != '2' && choix != '3' && choix != '4');
         // verification de victoire
         if (conditionvictoire(PosXj1, PosXj2,PosYj3,PosYj4)==1) {
             return;
@@ -138,7 +138,7 @@ void DeroulementPartie4j(char * nom1,char * nom2,char * nom3, char * nom4, char 
                 case '4': ; break;// annuler la dernière action
             }
             if (choix == '3') break;// passer son tour
-        } while (choix != '1' || choix != '2' || choix != '3' || choix != '4');
+        } while (choix != '1' && choix != '2' && choix != '3' && choix != '4');
         if (conditionvictoire(PosXj1, PosXj2,0,0)==2) {
             return;
         }
@@ -156,7 +156,7 @@ void DeroulementPartie4j(char * nom1,char * nom2,char * nom3, char * nom4, char 
                 case '4': ; break;// annuler la dernière action
             }
             if (choix == '3') break;// passer son tour
-        } while (choix != '1' || choix != '2' || choix != '3' || choix != '4');
+        } while (choix != '1' && choix != '2' && choix != '3' && choix != '4');
         if (conditionvictoire(PosXj1, PosXj2, PosYj3, PosYj4)==3) {
             return;
         }
@@ -175,7 +175,7 @@ void DeroulementPartie4j(char * nom1,char * nom2,char * nom3, char * nom4, char 
                 case '4': ; break;// annuler la dernière action
             }
             if (choix == '3') break;// passer son tour
-        } while (choix != '1' || choix != '2' || choix != '3' || choix != '4');
+        } while (choix != '1' && choix != '2' && choix != '3' && choix != '4');
         if (conditionvictoire(PosXj1, PosXj2, PosYj3, PosYj4)==4) {
             return;
         }
