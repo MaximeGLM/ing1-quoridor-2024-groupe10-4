@@ -21,4 +21,5 @@ int Deplacement();
 int MenuPause();
 char lirecaracconsole(int lignee, int colonnee);
 void Color(int couleurDuTexte,int couleurDeFond);
+void pas_de_victoire();
 #endif //PROJETINFO1_0_SOUSPROGRAMME_H

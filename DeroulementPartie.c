@@ -222,7 +222,7 @@ int DeroulementPartie4j(char *Joueur1, char *Joueur2,char* nom3, char* nom4, cha
         do {
             //Actualisation du plateau
             clearConsole();
-            plateau(nom3, nombrejoueur, jeton4, coordonnéesbarrières,nombrebarrières, barrièreJ4);
+            plateau(nom4, nombrejoueur, jeton4, coordonnéesbarrières,nombrebarrières, barrièreJ4);
             Color(10, 0);// on affiche le jeton du joueur 4 en couleur
             gotoligcol(PosXj4, PosYj4);
             printf("%c", jeton4);

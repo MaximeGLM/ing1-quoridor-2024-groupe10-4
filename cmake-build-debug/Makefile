@@ -200,6 +200,30 @@ DeroulementPartie.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\build.make CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/DeroulementPartie.c.s
 .PHONY : DeroulementPartie.c.s
 
+MenuFinPartie.obj: MenuFinPartie.c.obj
+.PHONY : MenuFinPartie.obj
+
+# target to build an object file
+MenuFinPartie.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\build.make CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/MenuFinPartie.c.obj
+.PHONY : MenuFinPartie.c.obj
+
+MenuFinPartie.i: MenuFinPartie.c.i
+.PHONY : MenuFinPartie.i
+
+# target to preprocess a source file
+MenuFinPartie.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\build.make CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/MenuFinPartie.c.i
+.PHONY : MenuFinPartie.c.i
+
+MenuFinPartie.s: MenuFinPartie.c.s
+.PHONY : MenuFinPartie.s
+
+# target to generate assembly for a file
+MenuFinPartie.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\build.make CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/MenuFinPartie.c.s
+.PHONY : MenuFinPartie.c.s
+
 MenuPause.obj: MenuPause.c.obj
 .PHONY : MenuPause.obj
 
@@ -314,6 +338,9 @@ help:
 	@echo ... DeroulementPartie.obj
 	@echo ... DeroulementPartie.i
 	@echo ... DeroulementPartie.s
+	@echo ... MenuFinPartie.obj
+	@echo ... MenuFinPartie.i
+	@echo ... MenuFinPartie.s
 	@echo ... MenuPause.obj
 	@echo ... MenuPause.i
 	@echo ... MenuPause.s
