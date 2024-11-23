@@ -82,8 +82,6 @@ int Deplacement(int* PosX, int* PosY) {
                     break;
                 }
                 break;
-
-
             case 's':
                 //Verification si le pion se situe en bas du plateau
                 if ( *PosX < 17 ) {
@@ -107,8 +105,6 @@ int Deplacement(int* PosX, int* PosY) {
                     break;
                 }
                 break;
-
-
             case 'q':
                 //Verification si le pion se situe à gauche du plateau
                 if ( *PosY > 2 ) {
@@ -132,8 +128,6 @@ int Deplacement(int* PosX, int* PosY) {
                     break;
                 }
                 break;
-
-
             case 'd':
                 //Verification si le pion se situe à droite du plateau
                 if ( *PosY < 32 ) {
@@ -156,7 +150,6 @@ int Deplacement(int* PosX, int* PosY) {
                     break;
                 }
                 break;
-
         }
     }while (1);
 }

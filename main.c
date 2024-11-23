@@ -30,7 +30,6 @@ int main() {
         }
     } while (sortie != 1);
     return 0;
-
 #ifdef _WIN32
         Sleep(5);
 #else
