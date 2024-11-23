@@ -18,5 +18,5 @@
                     /|||||||||\
                    /|||||||||||\
 
-
-   
+Commandes pour le déplacement du pion (z,q,s,d)
+Commandes pour positionner sa barrière (8,4,6,2) et ne pas oublier de valider

@@ -41,20 +41,10 @@ void afficherBarrières(int coordonnéesbarrières[3][20], int nombrebarriere) {
     }
 }
 
-void ActualiserPositionPions(int PosXj1,int PosYj1,int PosXj2,int PosYj2,int PosXj3,int PosYj3,int PosXj4,int PosYj4,char jeton1,char jeton2,char jeton3,char jeton4) {
-    gotoligcol(PosXj1, PosYj1);
-    printf("%c", jeton1);
-    gotoligcol(PosXj2, PosYj2);
-    printf("%c", jeton2);
-    gotoligcol(PosXj3, PosYj3);
-    printf("%c", jeton3);
-    gotoligcol(PosXj4, PosYj4);
-    printf("%c", jeton4);
-}
 
-void plateau(char nom1[], char nj, char jeton,int coordonnéesbarrières[3][20],int nombrebarrières) {
+void plateau(char nom1[], char nj, char jeton,int coordonnéesbarrières[3][20],int nombrebarrières, int murs) {
 
-    int score = 10, murs;
+    int score = 10;
 
     char plateaudejeu[19][19] = {
             {254, 254, 32, 254, 32, 254, 32, 254, 32, 254, 32, 254, 32, 254, 32, 254, 32, 254, 32},
