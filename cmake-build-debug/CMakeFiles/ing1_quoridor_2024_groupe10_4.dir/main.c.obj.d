@@ -1,5 +1,5 @@
 CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/main.c.obj: \
- C:\Users\tancd\CLionProjects\ing1-quoridor-2024-groupe10-4\main.c \
+ C:\Users\maxgo\Documents\GitHub\ing1-quoridor-2024-groupe10-4\main.c \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/x86_64-w64-mingw32/include/stdio.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/x86_64-w64-mingw32/include/corecrt.h \
@@ -277,6 +277,6 @@ CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/main.c.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/x86_64-w64-mingw32/include/winsvc.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/x86_64-w64-mingw32/include/mcx.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/x86_64-w64-mingw32/include/imm.h \
- C:\Users\tancd\CLionProjects\ing1-quoridor-2024-groupe10-4\sousprogramme.h \
+ C:\Users\maxgo\Documents\GitHub\ing1-quoridor-2024-groupe10-4\sousprogramme.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/x86_64-w64-mingw32/include/conio.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.2.1/bin/mingw/x86_64-w64-mingw32/include/sec_api/conio_s.h

@@ -16,7 +16,7 @@ int deplacement2();
 int barrieres();
 void AfficherLaBarrièreHorizontale();
 void AfficherLaBarrièreVerticale();
-void DeroulementPartie2j(char * nom1,char * nom2, char nombrejoueur);
+int DeroulementPartie2j(char * nom1,char * nom2, char nombrejoueur);
 void DeroulementPartie4j(char * nom1,char * nom2,char * nom3, char * nom4, char NombreJoueur);
 int Deplacement();
 void Menupause();

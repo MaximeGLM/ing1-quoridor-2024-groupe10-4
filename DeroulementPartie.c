@@ -5,12 +5,12 @@
 #include <stdio.h>
 
 #include "sousprogramme.h"
+// On définit le caractère des jetons
 #define jeton1 190
 #define jeton2 208
 #define jeton3 207
 #define jeton4 209
 //Fonction qui vérifie la position des joueurs pour confirmer la victoire d'un joueur
-//On peut ajouter un écran de fin
 int conditionvictoire(int PosXj1,int PosXj2, int PosYj3, int PosYj4) {
     if (PosXj1 == 1) {
         return 1;
@@ -26,9 +26,8 @@ int conditionvictoire(int PosXj1,int PosXj2, int PosYj3, int PosYj4) {
     }
     return 0;
 }
-void DeroulementPartie2j(char * nom1,char * nom2, char nombrejoueur) {
+int DeroulementPartie2j(char * Joueur1,char * Joueur2, char nombrejoueur) {
     //On initialise les variables
-    int victoire = 0;
     int choix = 0;
     int coordonnéesbarrières[3][20];
     int nombrebarrières=0;
@@ -39,32 +38,35 @@ void DeroulementPartie2j(char * nom1,char * nom2, char nombrejoueur) {
     int PosXj2 = 1, PosYj2 = 18;
 
 // Boucle pour l'instant infinie pour le déroulement de la partie
-    while (victoire == 0) {
+    while (1) {
+        //---------------------Premier joueur------------------------
         //Actualise la console
         clearConsole();
-        plateau(nom1, nombrejoueur, jeton1, coordonnéesbarrières, nombrebarrières);
+        plateau(Joueur1, nombrejoueur, jeton1, coordonnéesbarrières, nombrebarrières);
         //Place les pions
         gotoligcol(PosXj2, PosYj2);
         printf("%c", jeton2);
         gotoligcol(PosXj1, PosYj1);
         printf("%c", jeton1);
-
+        //Choix de l'action du joueur (blindé
         do {
             choix = getch();
             switch (choix) {
                 case '1': Deplacement(&PosXj1, &PosYj1); break;
                 case '2': barrieres(coordonnéesbarrières, &nombrebarrières); break;
+                case '3': break;
                 case '4': ; break;// annuler la dernière action
-                case '5': Menupause(); break;//lenu pause
+                case '5': Menupause(); break;
             }
-            if (choix == '3') break;// passer son tour
         } while (choix != '1' && choix != '2' && choix != '3' && choix != '4'&& choix != '5');// annuler la dernière action
 
+        // verification de victoire du joueur 1
         if (conditionvictoire(PosXj1, PosYj2,0,0)==1) {
-            return;
+            return 1;
         }
+        // ------------------------------Deuxième joueur-------------------------------------
         clearConsole();
-        plateau(nom2, nombrejoueur, jeton2, coordonnéesbarrières, nombrebarrières);
+        plateau(Joueur2, nombrejoueur, jeton2, coordonnéesbarrières, nombrebarrières);
         gotoligcol(PosXj2, PosYj2);
         printf("%c", jeton2);
         gotoligcol(PosXj1, PosYj1);
@@ -79,7 +81,7 @@ void DeroulementPartie2j(char * nom1,char * nom2, char nombrejoueur) {
             if (choix == '3') break;// passer son tour
         } while (choix != '1' && choix != '2' && choix != '3' && choix != '4');
         if (conditionvictoire(PosXj1, PosXj2,0,0)==2) {
-            return;
+            return 2;
         }
     }
 }

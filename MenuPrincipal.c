@@ -21,7 +21,7 @@ void clearConsole() {
 
 
 
-int menu(char *nom1, char *nom2, char *nj, char *nom3, char *nom4) {
+int menu(char *nom1, char *nom2, char *nj, char *nom3, char *nom4, int *sortie) {
     int stoop;
     do {
         clearConsole();
@@ -159,6 +159,10 @@ int menu(char *nom1, char *nom2, char *nj, char *nom3, char *nom4) {
             if(sortir == 27){
                 break;
             }
+        } else if (option == '5') {
+            *sortie = 1;
+            return 0;
+
         }
     } while (stoop != 10);
 }
