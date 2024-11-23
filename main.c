@@ -11,6 +11,7 @@
 int main() {
     int sortie = 0;
     //Boucle qui arrête le progamme seulement si le joueur choisit l'option de quitter le jeu dans le menu principal
+    Color(15,0);
     do {
         //initialisation des variables pour la partie
         char nombrejoueur;

@@ -3,6 +3,8 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
 #include "sousprogramme.h"
 
 
@@ -82,26 +84,37 @@ void plateau(char nom1[], char nj, char jeton,int coordonnéesbarrières[3][20],
     };
 
     bordures(plateaudejeu);
-
+    Color(8,0);
     for (int i = 0; i < 19; i++) {
         for (int j = 0; j < 19; j++) {
             printf("%c ", plateaudejeu[i][j]);
         }
         if( i == 0) {
+            Color(15,0);
             printf(" %s %c\n", messages[i], nj );
+            Color(8,0);
 
         }else if( i == 1){
+            Color(15,0);
             printf(" %s %s\n", messages[i], nom1 );
+            Color(8,0);
         }else if( i == 2){
+            Color(15,0);
             printf(" %s %d\n", messages[i], score );
+            Color(8,0);
         }else if( i == 3){
+            Color(15,0);
             printf(" %s %c\n", messages[i], jeton );
+            Color(8,0);
         }else if( i == 4){
+            Color(15,0);
             printf(" %s %d\n", messages[i], murs );
+            Color(8,0);
         } else{
             printf("\n");
         }
     }
+    Color(15,0);
     afficherBarrières(coordonnéesbarrières, nombrebarrières);
     gotoligcol(20,20);
     printf("\n");
@@ -111,4 +124,15 @@ void plateau(char nom1[], char nj, char jeton,int coordonnéesbarrières[3][20],
     printf("3) Passer son tour\n");
     printf("4) Annuler la derniere action\n");
     printf("5) Pause\n");
+}
+
+///////////////////////////////////////
+// Nom du sous-programme : COLOR
+// Rôle : change la couleur du texte dans la console, ainsi que la couleur du fond pour la ligne
+// Compatibilité : Xindows
+///////////////////////////////////////
+void Color(int couleurDuTexte,int couleurDeFond) // fonction d'affichage de couleurs
+{
+    HANDLE H=GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleTextAttribute(H,couleurDeFond*16+couleurDuTexte);
 }

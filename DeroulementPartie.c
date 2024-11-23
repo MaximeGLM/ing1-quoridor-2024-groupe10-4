@@ -40,46 +40,53 @@ int DeroulementPartie2j(char * Joueur1,char * Joueur2, char nombrejoueur) {
 // Boucle pour l'instant infinie pour le déroulement de la partie
     while (1) {
         //---------------------Premier joueur------------------------
-        //Actualise la console
-        clearConsole();
-        plateau(Joueur1, nombrejoueur, jeton1, coordonnéesbarrières, nombrebarrières);
-        //Place les pions
-        gotoligcol(PosXj2, PosYj2);
-        printf("%c", jeton2);
-        gotoligcol(PosXj1, PosYj1);
-        printf("%c", jeton1);
-        //Choix de l'action du joueur (blindé
         do {
+            //Actualise la console
+            clearConsole();
+            plateau(Joueur1, nombrejoueur, jeton1, coordonnéesbarrières, nombrebarrières);
+            //Place les pions
+            gotoligcol(PosXj2, PosYj2);
+            printf("%c", jeton2);
+            Color(10, 0);
+            gotoligcol(PosXj1, PosYj1);
+            printf("%c", jeton1);
+            Color(15, 0);
+            //Choix de l'action du joueur (blindé
+
             choix = getch();
             switch (choix) {
                 case '1': Deplacement(&PosXj1, &PosYj1); break;
                 case '2': barrieres(coordonnéesbarrières, &nombrebarrières); break;
-                case '3': break;
-                case '4': ; break;// annuler la dernière action
-                case '5': Menupause(); break;
+                case '3': break; // passe son tour
+                case '4': break;// annuler la dernière action
+                case '5': if (MenuPause() == 1) {return 0;} break;
             }
-        } while (choix != '1' && choix != '2' && choix != '3' && choix != '4'&& choix != '5');// annuler la dernière action
+        } while (choix != '1' && choix != '2' && choix != '3' && choix != '4');
 
         // verification de victoire du joueur 1
         if (conditionvictoire(PosXj1, PosYj2,0,0)==1) {
             return 1;
         }
         // ------------------------------Deuxième joueur-------------------------------------
-        clearConsole();
-        plateau(Joueur2, nombrejoueur, jeton2, coordonnéesbarrières, nombrebarrières);
-        gotoligcol(PosXj2, PosYj2);
-        printf("%c", jeton2);
-        gotoligcol(PosXj1, PosYj1);
-        printf("%c", jeton1);
         do {
+            clearConsole();
+            plateau(Joueur2, nombrejoueur, jeton2, coordonnéesbarrières, nombrebarrières);
+            Color(10, 0);
+            gotoligcol(PosXj2, PosYj2);
+            printf("%c", jeton2);
+            Color(15, 0);
+            gotoligcol(PosXj1, PosYj1);
+            printf("%c", jeton1);
             choix = getch();
             switch (choix) {
                 case '1': Deplacement(&PosXj2, &PosYj2); break;
                 case '2': barrieres(coordonnéesbarrières, &nombrebarrières); break;
+                case '3': break; // passe son tour
                 case '4': ; break;// annuler la dernière action
+                case '5': if (MenuPause()==1) {return 0;} break;
             }
-            if (choix == '3') break;// passer son tour
         } while (choix != '1' && choix != '2' && choix != '3' && choix != '4');
+
         if (conditionvictoire(PosXj1, PosXj2,0,0)==2) {
             return 2;
         }
