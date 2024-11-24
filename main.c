@@ -52,17 +52,17 @@ int main() {
                     switch(DeroulementPartie2j(Joueur1, Joueur2, nombrejoueur)) {
                         //affiche les écrans de victoire
                         case 0: pas_de_victoire(); getch(); break;
-                        case 1: break;//Victoire du joueur 1
-                        case 2: break;// Victoire du joueur 2
+                        case 1: Victoire(Joueur1); getch(); break;//Victoire du joueur 1
+                        case 2: Victoire(Joueur2); getch(); break;// Victoire du joueur 2
                     }break;
                 case '4':
                     switch(DeroulementPartie4j(Joueur1, Joueur2, Joueur3, Joueur4, nombrejoueur)) {
                         //affiche les écrans de victoire
                         case 0: pas_de_victoire(); getch(); break;
-                        case 1: break;//Victoire du joueur 1
-                        case 2: break;//Victoire du joueur 2
-                        case 3: break;//Victoire du joueur 3
-                        case 4: break;//Victoire du joueur 4
+                        case 1: Victoire(Joueur1); getch(); break;//Victoire du joueur 1
+                        case 2: Victoire(Joueur2); getch(); break;//Victoire du joueur 2
+                        case 3: Victoire(Joueur3); getch(); break;//Victoire du joueur 3
+                        case 4: Victoire(Joueur4); getch(); break;//Victoire du joueur 4
                     } break;
             }
         }
