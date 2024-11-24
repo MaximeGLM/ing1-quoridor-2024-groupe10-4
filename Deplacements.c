@@ -13,6 +13,7 @@
 #define jeton3 207
 #define jeton4 209
 
+//fonction qui déplace le curseur en fonction de sa localisation
 void gotoligcol( int lig, int col )
 {
     // ressources
@@ -21,6 +22,8 @@ void gotoligcol( int lig, int col )
     mycoord.Y = lig;
     SetConsoleCursorPosition( GetStdHandle( STD_OUTPUT_HANDLE ), mycoord );
 }
+
+
 char lirecaracconsole(int lignee, int colonnee) {
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     unsigned char ch;

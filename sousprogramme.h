@@ -23,5 +23,8 @@ char lirecaracconsole(int lignee, int colonnee);
 void Color(int couleurDuTexte,int couleurDeFond);
 void pas_de_victoire();
 void Victoire(char gagnant[]);
+void score(char gagnant[]);
+char LectureSauvegardeNombreJoueur();
+void LectureSauvegardeNomJoueur(char Joueur1[],char Joueur2[],char Joueur3[],char Joueur4[]);
 void AnnulerLaDerniereAction(int DerniereAction[], int *PosXj1, int *PosYj1, int *PosXj2, int *PosYj2, int *PosXj3, int *PosYj3, int *PosXj4, int *PosYj4, int CoordonneesBarrieres[3][20], int *nombreBarrieres, int *BarriresJ1, int *BarriresJ2, int *BarriresJ3, int *BarriresJ4);
 #endif //PROJETINFO1_0_SOUSPROGRAMME_H

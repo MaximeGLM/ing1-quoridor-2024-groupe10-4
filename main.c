@@ -27,21 +27,23 @@ int main() {
         char Joueur4[15]={0};
         //Affichage du menu principal
         menu(nom1, nom2, &nombrejoueur, nom3, nom4, &sortie);
-        //1er joueur tiré au hasard, les autres gardent leur ordre de passage
-        srand(time(NULL));
-        switch (nombrejoueur) {
-            case '4':
-                switch (rand() % 4) {
-                    case 0: strcpy(Joueur1, nom1); strcpy(Joueur2, nom2); strcpy(Joueur3, nom3); strcpy(Joueur4, nom4); break;
-                    case 1: strcpy(Joueur1, nom2); strcpy(Joueur2, nom3); strcpy(Joueur3, nom4); strcpy(Joueur4, nom1); break;
-                    case 2: strcpy(Joueur1, nom3); strcpy(Joueur2, nom4); strcpy(Joueur3, nom1); strcpy(Joueur4, nom2); break;
-                    case 3: strcpy(Joueur1, nom4); strcpy(Joueur2, nom1); strcpy(Joueur3, nom2); strcpy(Joueur4, nom3); break;
-                }break;
-            case '2':
-                switch (rand() % 2) {
-                    case 0: strcpy(Joueur1, nom1); strcpy(Joueur2, nom2); break;
-                    case 1: strcpy(Joueur1, nom2); strcpy(Joueur2, nom1); break;
-                }break;
+        if (nombrejoueur != '5') {//Nombrejoueur = 5 signifie que le programme doit lancé une partie sauvegardé
+            //1er joueur tiré au hasard, les autres gardent leur ordre de passage
+            srand(time(NULL));
+            switch (nombrejoueur) {
+                case '4':
+                    switch (rand() % 4) {
+                        case 0: strcpy(Joueur1, nom1); strcpy(Joueur2, nom2); strcpy(Joueur3, nom3); strcpy(Joueur4, nom4); break;
+                        case 1: strcpy(Joueur1, nom2); strcpy(Joueur2, nom3); strcpy(Joueur3, nom4); strcpy(Joueur4, nom1); break;
+                        case 2: strcpy(Joueur1, nom3); strcpy(Joueur2, nom4); strcpy(Joueur3, nom1); strcpy(Joueur4, nom2); break;
+                        case 3: strcpy(Joueur1, nom4); strcpy(Joueur2, nom1); strcpy(Joueur3, nom2); strcpy(Joueur4, nom3); break;
+                    }break;
+                case '2':
+                    switch (rand() % 2) {
+                        case 0: strcpy(Joueur1, nom1); strcpy(Joueur2, nom2); break;
+                        case 1: strcpy(Joueur1, nom2); strcpy(Joueur2, nom1); break;
+                    }break;
+            }
         }
         //Si l'utilisateur n'a pas choisi de quitter la partie alors...
         if (sortie == 0) {
@@ -64,6 +66,37 @@ int main() {
                         case 3: Victoire(Joueur3); getch(); break;//Victoire du joueur 3
                         case 4: Victoire(Joueur4); getch(); break;//Victoire du joueur 4
                     } break;
+                case '5':// Lancement d'une partie sauvegardé
+                    char NombreJoueur = '0';
+                    //On regarde sur le fichier de sauvegarde le nombre de joueur
+                    NombreJoueur = LectureSauvegardeNombreJoueur();
+                    //On lit le nom des joueurs
+                    LectureSauvegardeNomJoueur(Joueur1, Joueur2, Joueur3, Joueur4);
+
+
+
+                    switch (NombreJoueur) {
+                        case '4':
+                            switch(DeroulementPartie4j(Joueur1, Joueur2, Joueur3, Joueur4, NombreJoueur)) {
+                                //affiche les écrans de victoire
+                                case 0: pas_de_victoire(); getch(); break;
+                                case 1: Victoire(Joueur1); getch(); break;//Victoire du joueur 1
+                                case 2: Victoire(Joueur2); getch(); break;//Victoire du joueur 2
+                                case 3: Victoire(Joueur3); getch(); break;//Victoire du joueur 3
+                                case 4: Victoire(Joueur4); getch(); break;//Victoire du joueur 4
+                            } break;
+                        case '2':
+                            switch(DeroulementPartie2j(Joueur1, Joueur2, NombreJoueur)) {
+                                //affiche les écrans de victoire
+                                case 0: pas_de_victoire(); getch(); break;
+                                case 1: Victoire(Joueur1); getch(); break;//Victoire du joueur 1
+                                case 2: Victoire(Joueur2); getch(); break;// Victoire du joueur 2
+                            }
+
+
+
+
+                    }
             }
         }
     } while (sortie != 1);

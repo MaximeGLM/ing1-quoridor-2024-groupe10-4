@@ -320,6 +320,54 @@ PartieGraphique.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\build.make CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/PartieGraphique.c.s
 .PHONY : PartieGraphique.c.s
 
+Score.obj: Score.c.obj
+.PHONY : Score.obj
+
+# target to build an object file
+Score.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\build.make CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/Score.c.obj
+.PHONY : Score.c.obj
+
+Score.i: Score.c.i
+.PHONY : Score.i
+
+# target to preprocess a source file
+Score.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\build.make CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/Score.c.i
+.PHONY : Score.c.i
+
+Score.s: Score.c.s
+.PHONY : Score.s
+
+# target to generate assembly for a file
+Score.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\build.make CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/Score.c.s
+.PHONY : Score.c.s
+
+chargementSauvegarde.obj: chargementSauvegarde.c.obj
+.PHONY : chargementSauvegarde.obj
+
+# target to build an object file
+chargementSauvegarde.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\build.make CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/chargementSauvegarde.c.obj
+.PHONY : chargementSauvegarde.c.obj
+
+chargementSauvegarde.i: chargementSauvegarde.c.i
+.PHONY : chargementSauvegarde.i
+
+# target to preprocess a source file
+chargementSauvegarde.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\build.make CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/chargementSauvegarde.c.i
+.PHONY : chargementSauvegarde.c.i
+
+chargementSauvegarde.s: chargementSauvegarde.c.s
+.PHONY : chargementSauvegarde.s
+
+# target to generate assembly for a file
+chargementSauvegarde.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\build.make CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/chargementSauvegarde.c.s
+.PHONY : chargementSauvegarde.c.s
+
 main.obj: main.c.obj
 .PHONY : main.obj
 
@@ -377,6 +425,12 @@ help:
 	@echo ... PartieGraphique.obj
 	@echo ... PartieGraphique.i
 	@echo ... PartieGraphique.s
+	@echo ... Score.obj
+	@echo ... Score.i
+	@echo ... Score.s
+	@echo ... chargementSauvegarde.obj
+	@echo ... chargementSauvegarde.i
+	@echo ... chargementSauvegarde.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

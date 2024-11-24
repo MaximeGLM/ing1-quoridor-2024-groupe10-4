@@ -139,6 +139,7 @@ int DeroulementPartie4j(char *Joueur1, char *Joueur2,char* nom3, char* nom4, cha
     //Initialise un tableau pour enregistrer les coordonnées des barrières
     int coordonnéesbarrières[3][20]={0};
     int nombrebarrières=0;
+    int DerniereAction[10] = {0};
     //Initialise un compteur de barrière pour chaque joueur
     int barrièreJ1 = 5;
     int barrièreJ2 = 5;
@@ -167,18 +168,27 @@ int DeroulementPartie4j(char *Joueur1, char *Joueur2,char* nom3, char* nom4, cha
 
             choix = getch();
             switch (choix) {
-                case '1': Deplacement(&PosXj1, &PosYj1); break;
-                case '2':
+                case '1'://Déplace le pion
+                    DerniereAction[0] = 1;//On enregistre le déplacement
+                    DerniereAction[1] = 1;//On enregistre le joueur
+                    DerniereAction[2] = PosXj1;//On enregistre la coordonnée X
+                    DerniereAction[3] = PosYj1;//On enregistre la coordonnée Y
+                Deplacement(&PosXj1, &PosYj1); break;
+                case '2':// Pose une barrière
                     if (barrièreJ1 > 0 ) {
+                        DerniereAction[0] = 2;//On enregistre la pause d'une barrière
+                        DerniereAction[1] = 1;//On enregistre le joueur
                         barrieres(coordonnéesbarrières, &nombrebarrières);
                         barrièreJ1--;
                     } else {
-                        choix = 0 ;
+                        choix = 0 ;//Annuler l'action et éviter de passer le tour
                     }
-                    break;
+                break;
                 case '3': break; // passe son tour
-                case '4': break;// annuler la dernière action
-                case '5': if (MenuPause() == 1) {return 0;} break;
+                case '4':// Annule la dernière action
+                    AnnulerLaDerniereAction(DerniereAction, &PosXj1, &PosYj1, &PosXj2, &PosYj2,&PosXj3,&PosYj3,&PosXj4,&PosYj4, coordonnéesbarrières, &nombrebarrières, &barrièreJ1, &barrièreJ2, &barrièreJ3,&barrièreJ4);
+                break;// annuler la dernière action
+                case '5': if (MenuPause() == 1) {return 0;} break; // Menu pause
             }
         } while (choix != '1' && choix != '2' && choix != '3' && choix != '4');
 
@@ -200,18 +210,27 @@ int DeroulementPartie4j(char *Joueur1, char *Joueur2,char* nom3, char* nom4, cha
             printf("%c", jeton4);
             choix = getch();
             switch (choix) {
-                case '1': Deplacement(&PosXj2, &PosYj2); break;
-                case '2':
+                case '1'://Déplace le pion
+                    DerniereAction[0] = 1;//On enregistre le déplacement
+                DerniereAction[1] = 2;//On enregistre le joueur
+                DerniereAction[2] = PosXj2;//On enregistre la coordonnée X
+                DerniereAction[3] = PosYj2;//On enregistre la coordonnée Y
+                Deplacement(&PosXj2, &PosYj2); break;
+                case '2':// Pose une barrière
                     if (barrièreJ2 > 0 ) {
+                        DerniereAction[0] = 2;//On enregistre la pause d'une barrière
+                        DerniereAction[1] = 2;//On enregistre le joueur
                         barrieres(coordonnéesbarrières, &nombrebarrières);
                         barrièreJ2--;
                     } else {
-                        choix = 0 ;
+                        choix = 0 ;//Annuler l'action et éviter de passer le tour
                     }
                 break;
                 case '3': break; // passe son tour
-                case '4': ; break;// annuler la dernière action
-                case '5': if (MenuPause()==1) {return 0;} break;
+                case '4':// Annule la dernière action
+                    AnnulerLaDerniereAction(DerniereAction, &PosXj1, &PosYj1, &PosXj2, &PosYj2,&PosXj3,&PosYj3,&PosXj4,&PosYj4, coordonnéesbarrières, &nombrebarrières, &barrièreJ1, &barrièreJ2, &barrièreJ3,&barrièreJ4);
+                break;// annuler la dernière action
+                case '5': if (MenuPause() == 1) {return 0;} break; // Menu pause
             }
         } while (choix != '1' && choix != '2' && choix != '3' && choix != '4');
 
@@ -235,18 +254,27 @@ int DeroulementPartie4j(char *Joueur1, char *Joueur2,char* nom3, char* nom4, cha
             //Menu de choix
             choix = getch();
             switch (choix) {
-                case '1': Deplacement(&PosXj3, &PosYj3); break;
-                case '2':
+                case '1'://Déplace le pion
+                    DerniereAction[0] = 1;//On enregistre le déplacement
+                DerniereAction[1] = 3;//On enregistre le joueur
+                DerniereAction[2] = PosXj3;//On enregistre la coordonnée X
+                DerniereAction[3] = PosYj3;//On enregistre la coordonnée Y
+                Deplacement(&PosXj3, &PosYj3); break;
+                case '2':// Pose une barrière
                     if (barrièreJ3 > 0 ) {
+                        DerniereAction[0] = 2;//On enregistre la pause d'une barrière
+                        DerniereAction[1] = 3;//On enregistre le joueur
                         barrieres(coordonnéesbarrières, &nombrebarrières);
                         barrièreJ3--;
                     } else {
-                        choix = 0 ;
+                        choix = 0 ;//Annuler l'action et éviter de passer le tour
                     }
                 break;
-                case '3': break; // Passer son tour
-                case '4': ; break;// annuler la dernière action
-                case '5': if (MenuPause()==1) {return 0;} break; // Mettre en pause
+                case '3': break; // passe son tour
+                case '4':// Annule la dernière action
+                    AnnulerLaDerniereAction(DerniereAction, &PosXj1, &PosYj1, &PosXj2, &PosYj2,&PosXj3,&PosYj3,&PosXj4,&PosYj4, coordonnéesbarrières, &nombrebarrières, &barrièreJ1, &barrièreJ2, &barrièreJ3,&barrièreJ4);
+                break;// annuler la dernière action
+                case '5': if (MenuPause() == 1) {return 0;} break; // Menu pause
             }
         } while (choix != '1' && choix != '2' && choix != '3' && choix != '4');
         if (conditionvictoire(PosXj1, PosXj2, PosYj3, PosYj4)==3) { return 3; }
@@ -269,18 +297,27 @@ int DeroulementPartie4j(char *Joueur1, char *Joueur2,char* nom3, char* nom4, cha
 
             choix = getch();
             switch (choix) {
-                case '1': Deplacement(&PosXj4, &PosYj4); break;
-                case '2':
+                case '1'://Déplace le pion
+                    DerniereAction[0] = 1;//On enregistre le déplacement
+                DerniereAction[1] = 4;//On enregistre le joueur
+                DerniereAction[2] = PosXj4;//On enregistre la coordonnée X
+                DerniereAction[3] = PosYj4;//On enregistre la coordonnée Y
+                Deplacement(&PosXj4, &PosYj4); break;
+                case '2':// Pose une barrière
                     if (barrièreJ4 > 0 ) {
+                        DerniereAction[0] = 2;//On enregistre la pause d'une barrière
+                        DerniereAction[1] = 4;//On enregistre le joueur
                         barrieres(coordonnéesbarrières, &nombrebarrières);
                         barrièreJ4--;
                     } else {
-                        choix = 0 ;
+                        choix = 0 ;//Annuler l'action et éviter de passer le tour
                     }
-                    break;
-                case '3': break;//Passer son tour
-                case '4': break;// annuler la dernière action
-                case '5': if (MenuPause()==1) {return 0;} break;
+                break;
+                case '3': break; // passe son tour
+                case '4':// Annule la dernière action
+                    AnnulerLaDerniereAction(DerniereAction, &PosXj1, &PosYj1, &PosXj2, &PosYj2,&PosXj3,&PosYj3,&PosXj4,&PosYj4, coordonnéesbarrières, &nombrebarrières, &barrièreJ1, &barrièreJ2, &barrièreJ3,&barrièreJ4);
+                break;// annuler la dernière action
+                case '5': if (MenuPause() == 1) {return 0;} break; // Menu pause
             }
         } while (choix != '1' && choix != '2' && choix != '3' && choix != '4');
         if (conditionvictoire(PosXj1, PosXj2, PosYj3, PosYj4) == 4) { return 4; }

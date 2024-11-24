@@ -1,9 +1,8 @@
 #include <stdio.h>
 
 #include "sousprogramme.h"
-//
-// Created by maxgo on 23/11/2024.
-//
+
+//fonction qui affiche une fin de partie sans gagnant avant de revenir au menu pricipale
 void pas_de_victoire() {
     clearConsole();
     FILE *fichierFinSansVictoire = fopen("../menus/FinPartieSansVictoire.txt", "r");
@@ -24,6 +23,7 @@ void pas_de_victoire() {
     fclose(fichierFinSansVictoire);
 }
 
+//Fonction qui affiche la victoire du joueur et actualise le score
 void Victoire(char gagnant[]) {
     clearConsole();
     FILE *fichierFinVictoire = fopen("../menus/FinPartieVictoire.txt", "r");
@@ -44,4 +44,5 @@ void Victoire(char gagnant[]) {
 
     // Fermer le fichier
     fclose(fichierFinVictoire);
+    score(gagnant);
 }

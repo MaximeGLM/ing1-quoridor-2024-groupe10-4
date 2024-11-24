@@ -15,4 +15,6 @@ add_executable(ing1_quoridor_2024_groupe10_4
         DeroulementPartie.c
         MenuPause.c
         MenuFinPartie.c
-        AnnulerLaDerniereAction.c)
+        AnnulerLaDerniereAction.c
+        Score.c
+        chargementSauvegarde.c)

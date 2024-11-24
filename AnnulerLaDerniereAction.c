@@ -12,43 +12,33 @@ void AnnulerLaDerniereAction(int DerniereAction[], int *PosXj1, int *PosYj1, int
                     *PosXj2 = DerniereAction[2];
                     *PosYj2 = DerniereAction[3];
                 return;
-                case 3:
+                case 3:// On change les coordonnées du joueur 3
                     *PosXj3 = DerniereAction[2];
                     *PosYj3 = DerniereAction[3];
                 return;
-                case 4:
+                case 4:// On change les coordonnées du joueur 4
                     *PosXj4 = DerniereAction[2];
                     *PosYj4 = DerniereAction[3];
                 return;
             }
         case 2:// il s'agit d'une barrière
+            // On supprime la dernière barrière ajoutée du tableau
+            CoordonneesBarrieres[0][*nombreBarrieres] = -1;
+            CoordonneesBarrieres[1][*nombreBarrieres] = -1;
+            CoordonneesBarrieres[2][*nombreBarrieres] = -1;
+            (*nombreBarrieres)--;
+            //En fonction de qui à posé la barrière on actualise les compteurs des joueurs
             switch (DerniereAction[1]) {
                 case 1:
-                    CoordonneesBarrieres[0][*nombreBarrieres] = -1;
-                    CoordonneesBarrieres[1][*nombreBarrieres] = -1;
-                    CoordonneesBarrieres[2][*nombreBarrieres] = -1;
-                    (*nombreBarrieres)--;
                     (*BarriresJ1)++;
                 return;
                 case 2:
-                    CoordonneesBarrieres[0][*nombreBarrieres] = -1;
-                    CoordonneesBarrieres[1][*nombreBarrieres] = -1;
-                    CoordonneesBarrieres[2][*nombreBarrieres] = -1;
-                    (*nombreBarrieres)--;
                     (*BarriresJ2)++;
                 return;
                 case 3:
-                    CoordonneesBarrieres[0][*nombreBarrieres] = -1;
-                    CoordonneesBarrieres[1][*nombreBarrieres] = -1;
-                    CoordonneesBarrieres[2][*nombreBarrieres] = -1;
-                    (*nombreBarrieres)--;
                     (*BarriresJ3)++;
                 return;
                 case 4:
-                    CoordonneesBarrieres[0][*nombreBarrieres] = -1;
-                    CoordonneesBarrieres[1][*nombreBarrieres] = -1;
-                    CoordonneesBarrieres[2][*nombreBarrieres] = -1;
-                    (*nombreBarrieres)--;
                     (*BarriresJ4)++;
                 return;
             }

@@ -6,8 +6,6 @@
 #include "sousprogramme.h"
 
 void Ouvre_le_Menupause() {
-    int stoop;
-
     clearConsole();
     FILE *fichierMenupause = fopen("../menus/Menupause.txt", "r");
     char c;

@@ -16,6 +16,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/maxgo/Documents/GitHub/ing1-quoridor-2024-groupe10-4/MenuPause.c" "CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/MenuPause.c.obj" "gcc" "CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/MenuPause.c.obj.d"
   "C:/Users/maxgo/Documents/GitHub/ing1-quoridor-2024-groupe10-4/MenuPrincipal.c" "CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/MenuPrincipal.c.obj" "gcc" "CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/MenuPrincipal.c.obj.d"
   "C:/Users/maxgo/Documents/GitHub/ing1-quoridor-2024-groupe10-4/PartieGraphique.c" "CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/PartieGraphique.c.obj" "gcc" "CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/PartieGraphique.c.obj.d"
+  "C:/Users/maxgo/Documents/GitHub/ing1-quoridor-2024-groupe10-4/Score.c" "CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/Score.c.obj" "gcc" "CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/Score.c.obj.d"
+  "C:/Users/maxgo/Documents/GitHub/ing1-quoridor-2024-groupe10-4/chargementSauvegarde.c" "CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/chargementSauvegarde.c.obj" "gcc" "CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/chargementSauvegarde.c.obj.d"
   "C:/Users/maxgo/Documents/GitHub/ing1-quoridor-2024-groupe10-4/main.c" "CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/main.c.obj" "gcc" "CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/main.c.obj.d"
   )
 

@@ -136,7 +136,9 @@ int menu(char *nom1, char *nom2, char *nj, char *nom3, char *nom4, int *sortie) 
                 stoop = 10;
             }
         } else if (option == '2') {
-            // Adicione seu código para a opção 2 aqui
+            *nj = '5';
+            return 0;
+
         } else if (option == '3') {
             clearConsole();
             FILE *fichier3 = fopen("../menus/menuAide.txt", "r");
@@ -159,6 +161,35 @@ int menu(char *nom1, char *nom2, char *nj, char *nom3, char *nom4, int *sortie) 
             if(sortir == 27){
                 break;
             }
+        } else if (option == '4') {
+            clearConsole();
+            FILE *fichierEsthétiqueScore = fopen("../menus/ScoreDesJoueurs.txt", "r");
+            char c4;
+            // Lire et afficher le contenu du fichier caractère par caractère
+            while ((c4 = fgetc(fichierEsthétiqueScore)) != EOF) {
+                putchar(c4);  // Afficher le caractère dans la console
+            }
+            fclose(fichierEsthétiqueScore);
+            printf("\n");
+            //On affiche les données de score
+            FILE *fichierScore = fopen("../Score/Score.txt", "r");
+            char c3;
+
+            // Vérifier si le fichier a été ouvert avec succès
+            if (fichierScore == NULL) {
+                perror("Erreur à l'ouverture du fichier score.txt");
+                return 1;  // Retourner une erreur
+            }
+
+            // Lire et afficher le contenu du fichier caractère par caractère
+            while ((c3 = fgetc(fichierScore)) != EOF) {
+                putchar(c3);  // Afficher le caractère dans la console
+            }
+            // Fermer le fichier
+            fclose(fichierScore);
+            getchar();
+
+
         } else if (option == '5') {
             *sortie = 1;
             return 0;

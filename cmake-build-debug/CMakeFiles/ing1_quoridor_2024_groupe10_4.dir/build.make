@@ -203,6 +203,36 @@ CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/AnnulerLaDerniereAction.c.s: cmake_
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/AnnulerLaDerniereAction.c.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\maxgo\Documents\GitHub\ing1-quoridor-2024-groupe10-4\AnnulerLaDerniereAction.c -o CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\AnnulerLaDerniereAction.c.s
 
+CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/Score.c.obj: CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/flags.make
+CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/Score.c.obj: CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/includes_C.rsp
+CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/Score.c.obj: C:/Users/maxgo/Documents/GitHub/ing1-quoridor-2024-groupe10-4/Score.c
+CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/Score.c.obj: CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\maxgo\Documents\GitHub\ing1-quoridor-2024-groupe10-4\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/Score.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/Score.c.obj -MF CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\Score.c.obj.d -o CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\Score.c.obj -c C:\Users\maxgo\Documents\GitHub\ing1-quoridor-2024-groupe10-4\Score.c
+
+CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/Score.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/Score.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\maxgo\Documents\GitHub\ing1-quoridor-2024-groupe10-4\Score.c > CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\Score.c.i
+
+CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/Score.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/Score.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\maxgo\Documents\GitHub\ing1-quoridor-2024-groupe10-4\Score.c -o CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\Score.c.s
+
+CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/chargementSauvegarde.c.obj: CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/flags.make
+CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/chargementSauvegarde.c.obj: CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/includes_C.rsp
+CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/chargementSauvegarde.c.obj: C:/Users/maxgo/Documents/GitHub/ing1-quoridor-2024-groupe10-4/chargementSauvegarde.c
+CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/chargementSauvegarde.c.obj: CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\maxgo\Documents\GitHub\ing1-quoridor-2024-groupe10-4\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/chargementSauvegarde.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/chargementSauvegarde.c.obj -MF CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\chargementSauvegarde.c.obj.d -o CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\chargementSauvegarde.c.obj -c C:\Users\maxgo\Documents\GitHub\ing1-quoridor-2024-groupe10-4\chargementSauvegarde.c
+
+CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/chargementSauvegarde.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/chargementSauvegarde.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\maxgo\Documents\GitHub\ing1-quoridor-2024-groupe10-4\chargementSauvegarde.c > CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\chargementSauvegarde.c.i
+
+CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/chargementSauvegarde.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/chargementSauvegarde.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\maxgo\Documents\GitHub\ing1-quoridor-2024-groupe10-4\chargementSauvegarde.c -o CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\chargementSauvegarde.c.s
+
 # Object files for target ing1_quoridor_2024_groupe10_4
 ing1_quoridor_2024_groupe10_4_OBJECTS = \
 "CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/main.c.obj" \
@@ -213,7 +243,9 @@ ing1_quoridor_2024_groupe10_4_OBJECTS = \
 "CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/DeroulementPartie.c.obj" \
 "CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/MenuPause.c.obj" \
 "CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/MenuFinPartie.c.obj" \
-"CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/AnnulerLaDerniereAction.c.obj"
+"CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/AnnulerLaDerniereAction.c.obj" \
+"CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/Score.c.obj" \
+"CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/chargementSauvegarde.c.obj"
 
 # External object files for target ing1_quoridor_2024_groupe10_4
 ing1_quoridor_2024_groupe10_4_EXTERNAL_OBJECTS =
@@ -227,11 +259,13 @@ ing1_quoridor_2024_groupe10_4.exe: CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/
 ing1_quoridor_2024_groupe10_4.exe: CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/MenuPause.c.obj
 ing1_quoridor_2024_groupe10_4.exe: CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/MenuFinPartie.c.obj
 ing1_quoridor_2024_groupe10_4.exe: CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/AnnulerLaDerniereAction.c.obj
+ing1_quoridor_2024_groupe10_4.exe: CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/Score.c.obj
+ing1_quoridor_2024_groupe10_4.exe: CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/chargementSauvegarde.c.obj
 ing1_quoridor_2024_groupe10_4.exe: CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/build.make
 ing1_quoridor_2024_groupe10_4.exe: CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/linkLibs.rsp
 ing1_quoridor_2024_groupe10_4.exe: CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/objects1.rsp
 ing1_quoridor_2024_groupe10_4.exe: CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\maxgo\Documents\GitHub\ing1-quoridor-2024-groupe10-4\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C executable ing1_quoridor_2024_groupe10_4.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\maxgo\Documents\GitHub\ing1-quoridor-2024-groupe10-4\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking C executable ing1_quoridor_2024_groupe10_4.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
