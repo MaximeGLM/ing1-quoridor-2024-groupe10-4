@@ -33,6 +33,7 @@ int DeroulementPartie2j(char * Joueur1,char * Joueur2, char nombrejoueur) {
     int nombrebarrières=0;
     int barrièreJ1 = 10;
     int barrièreJ2 = 10;
+    int DerniereAction[10] = {0};
 
 
     //On place les pions à leurs origines
@@ -53,14 +54,29 @@ int DeroulementPartie2j(char * Joueur1,char * Joueur2, char nombrejoueur) {
             gotoligcol(PosXj1, PosYj1);
             printf("%c", jeton1);
             Color(15, 0);
-            //Choix de l'action du joueur (blindé
-
+            //Choix de l'action du joueur (blindé)
             choix = getch();
             switch (choix) {
-                case '1': Deplacement(&PosXj1, &PosYj1); break;
-                case '2': barrieres(coordonnéesbarrières, &nombrebarrières); break;
+                case '1':
+                    DerniereAction[0] = 1;//On enregistre le déplacement
+                    DerniereAction[1] = 1;//On enregistre le joueur
+                    DerniereAction[2] = PosXj1;//On enregistre la coordonnée X
+                    DerniereAction[3] = PosYj1;//On enregistre la coordonnée Y
+                    Deplacement(&PosXj1, &PosYj1); break;
+                case '2':
+                    if (barrièreJ1 > 0 ) {
+                        DerniereAction[0] = 2;//On enregistre la pause d'une barrière
+                        DerniereAction[1] = 2;//On enregistre le joueur
+                        barrieres(coordonnéesbarrières, &nombrebarrières);
+                        barrièreJ1--;
+                    } else {
+                        choix = 0 ;
+                    }
+                break;
                 case '3': break; // passe son tour
-                case '4': break;// annuler la dernière action
+                case '4':
+                    AnnulerLaDerniereAction(DerniereAction, &PosXj1, &PosYj1, &PosXj2, &PosYj2,0,0,0,0, coordonnéesbarrières, &nombrebarrières, &barrièreJ1, &barrièreJ2, 0,0);
+                    break;// annuler la dernière action
                 case '5': if (MenuPause() == 1) {return 0;} break;
             }
         } while (choix != '1' && choix != '2' && choix != '3' && choix != '4');
@@ -81,10 +97,27 @@ int DeroulementPartie2j(char * Joueur1,char * Joueur2, char nombrejoueur) {
             printf("%c", jeton1);
             choix = getch();
             switch (choix) {
-                case '1': Deplacement(&PosXj2, &PosYj2); break;
-                case '2': barrieres(coordonnéesbarrières, &nombrebarrières); break;
-                case '3': break; // passe son tour
-                case '4': ; break;// annuler la dernière action
+                case '1':
+                    DerniereAction[0] = 1;//On enregistre le déplacement
+                    DerniereAction[1] = 2;//On enregistre le joueur
+                    DerniereAction[2] = PosXj2;//On enregistre la coordonnée X
+                    DerniereAction[3] = PosYj2;//On enregistre la coordonnée Y
+                    Deplacement(&PosXj2, &PosYj2);
+                break;
+                case '2':
+                    if (barrièreJ2 > 0 ) {
+                        DerniereAction[0] = 2;//On enregistre la pause d'une barrière
+                        DerniereAction[1] = 2;//On enregistre le joueur
+                        barrieres(coordonnéesbarrières, &nombrebarrières);
+                        barrièreJ2--;
+                    } else {
+                        choix = 0 ;
+                    }
+                break;
+                case '3':break; // passe son tour
+                case '4':
+                    AnnulerLaDerniereAction(DerniereAction, &PosXj1, &PosYj1, &PosXj2, &PosYj2,0,0,0,0, coordonnéesbarrières, &nombrebarrières, &barrièreJ1, &barrièreJ2, 0,0);
+                break;// annuler la dernière action
                 case '5': if (MenuPause()==1) {return 0;} break;
             }
         } while (choix != '1' && choix != '2' && choix != '3' && choix != '4');

@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/AnnulerLaDerniereAction.c.obj"
+  "CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/AnnulerLaDerniereAction.c.obj.d"
   "CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/Barrieres.c.obj"
   "CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/Barrieres.c.obj.d"
   "CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/Deplacements.c.obj"

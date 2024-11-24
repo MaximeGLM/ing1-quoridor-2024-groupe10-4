@@ -14,4 +14,5 @@ add_executable(ing1_quoridor_2024_groupe10_4
         Deplacements.c
         DeroulementPartie.c
         MenuPause.c
-        MenuFinPartie.c)
+        MenuFinPartie.c
+        AnnulerLaDerniereAction.c)

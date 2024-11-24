@@ -128,6 +128,30 @@ ing1_quoridor_2024_groupe10_4/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\build.make CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/build
 .PHONY : ing1_quoridor_2024_groupe10_4/fast
 
+AnnulerLaDerniereAction.obj: AnnulerLaDerniereAction.c.obj
+.PHONY : AnnulerLaDerniereAction.obj
+
+# target to build an object file
+AnnulerLaDerniereAction.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\build.make CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/AnnulerLaDerniereAction.c.obj
+.PHONY : AnnulerLaDerniereAction.c.obj
+
+AnnulerLaDerniereAction.i: AnnulerLaDerniereAction.c.i
+.PHONY : AnnulerLaDerniereAction.i
+
+# target to preprocess a source file
+AnnulerLaDerniereAction.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\build.make CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/AnnulerLaDerniereAction.c.i
+.PHONY : AnnulerLaDerniereAction.c.i
+
+AnnulerLaDerniereAction.s: AnnulerLaDerniereAction.c.s
+.PHONY : AnnulerLaDerniereAction.s
+
+# target to generate assembly for a file
+AnnulerLaDerniereAction.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ing1_quoridor_2024_groupe10_4.dir\build.make CMakeFiles/ing1_quoridor_2024_groupe10_4.dir/AnnulerLaDerniereAction.c.s
+.PHONY : AnnulerLaDerniereAction.c.s
+
 Barrieres.obj: Barrieres.c.obj
 .PHONY : Barrieres.obj
 
@@ -329,6 +353,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... ing1_quoridor_2024_groupe10_4
+	@echo ... AnnulerLaDerniereAction.obj
+	@echo ... AnnulerLaDerniereAction.i
+	@echo ... AnnulerLaDerniereAction.s
 	@echo ... Barrieres.obj
 	@echo ... Barrieres.i
 	@echo ... Barrieres.s
